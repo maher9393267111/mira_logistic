@@ -60,11 +60,11 @@ src={urlFor(item?.image)?.url()}
                   </div>
                   <div dir={lang === 'ar' && 'rtl'} className="lower-content">
                     <ul className="post-info">
-                      <li><i className="fa fa-user-circle"></i>Admin</li>
+                      {/* <li><i className="fa fa-user-circle"></i>Admin</li> */}
                       {/* <li><i className="fa fa-comments"></i> 2 Comments</li> */}
                     </ul>
 
-                    <h4 className="title"><Link href={`/news/${item?.slug?.current}`}>
+                    <h4 className="title arabic mt-4"><Link href={`/news/${item?.slug?.current}`}>
                       {lang === 'en' ? item?.heading : lang === 'ar' ? item?.headingar : item?.headingtr}</Link></h4>
                     {/* <div className="text">{item.text}</div> */}
                   </div>
