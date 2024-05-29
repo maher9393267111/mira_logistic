@@ -1,11 +1,11 @@
 import { groq } from "next-sanity";
 import { client } from "../../../lib/sanity.client";
-import MainContact from "./mainContact";
+import MainAbout from "./mainAbout";
 
 export const revalidate = 30;
 
 const query = groq`
-  *[_type=='contact'] {
+  *[_type=='aboutone'] {
     ...,
     
     
@@ -25,15 +25,15 @@ interface Props {
   };
 }
 
-const ContactPage = async ({ searchParams }: Props) => {
-  const contactData = await client.fetch(query);
-  console.log(contactData[0]);
+const AboutPage = async ({ searchParams }: Props) => {
+  const aboutData = await client.fetch(query);
+  console.log(aboutData[0]);
 
   return (
     <>
-      <MainContact />
+      <MainAbout data={aboutData[0]} />
     </>
   );
 };
 
-export default ContactPage;
+export default AboutPage;

@@ -3,9 +3,9 @@ import { defineField, defineType, defineArrayMember } from "sanity";
 import { preview } from "sanity-plugin-icon-picker";
 
 export const AboutOne = defineType({
-  name: "aboutOne",
+  name: "aboutone",
   type: "document",
-  title: "AboutOne",
+  title: "Aboutone",
   fields: [
     defineField({
       name: "heading",
@@ -17,28 +17,10 @@ export const AboutOne = defineType({
       type: "string",
     }),
 
-
-    // defineField({
-    //   name: "title",
-    //   type: "string",
-    // }),
-
-
-
-
     defineField({
-      name: "slug",
-      title: "Slug",
-      type: "slug",
-      options: {
-        source: "heading",
-        maxLength: 25,
-      },
+      name: "headingtr",
+      type: "string",
     }),
-
-
-
-
 
     defineField({
       name: "desc",
@@ -47,8 +29,6 @@ export const AboutOne = defineType({
       type: "string",
     }),
 
-
-    
     defineField({
       name: "descar",
       description: "Enter a short snippet for the arabic desc...",
@@ -56,93 +36,38 @@ export const AboutOne = defineType({
       type: "string",
     }),
 
-
-   
-
- 
-    // arra
-
-    // {
-    //   name: "achivments",
-    //   type: "array",
-    //   title: "Achivments",
-    //   of: [
-    //     {
-    //       type: "object",
-    //       fields: [
-    //         {
-    //           name: "title",
-    //           type: "string",
-    //           title: "Title",
-    //         },
-
-    //         {
-    //           name: "number",
-    //           type: "string",
-    //           title: "Number",
-    //         },
-    //         {
-    //           name: "numbertitle",
-    //           type: "string",
-    //           title: "NumberTitle",
-    //         },
-            
-    // ({ name: "Icon", type: "inlineSvg" }),
+    defineField({
+      name: "desctr",
+      description: "Enter a short snippet for the turkish desc...",
+      title: "DescriptionTurkish",
+      type: "string",
+    }),
 
 
-
-    //       ],
-
-    //     },
-    //   ],
-    // },
-
-    // {
-    //   name: "features",
-    //   type: "array",
-    //   title: "Features",
-    //   of: [
-    //     {
-    //       type: "object",
-    //       fields: [
-    //         {
-    //           name: "title",
-    //           type: "string",
-    //           title: "Title",
-    //         },
-
-    //         {
-    //           name: "desc",
-    //           type: "string",
-    //           title: "Desc",
-    //         },
-
-    //         ({
-    //             name: "image",
-    //             type: "image",
-    //             options: { hotspot: true },
-    //             fields: [
-    //               defineField({
-    //                 name: "alt",
-    //                 type: "string",
-    //                 title: "Alternative text",
-    //               }),
-    //             ],
-    //           }),
-    //       ],
-
-    //       // show icon instead of icon name
-    //     },
-    //   ],
-    // },
+    
+    defineField({
+      name: "year",
+      type: "number",
+    }),
 
 
-  
+    
+    defineField({
+      name: "customersnumber",
+      type: "string",
+    }),
 
 
 
 
- 
+    defineField({
+      name: "image",
+      title: "Image",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    }),
   ],
   icon: DocumentTextIcon,
   preview: {
@@ -153,7 +78,7 @@ export const AboutOne = defineType({
     prepare({ title, image }) {
       return {
         title: title || "Untitled",
-        subtitle: "AboutOne",
+        subtitle: "Aboutone",
         media: image || DocumentTextIcon,
       };
     },
