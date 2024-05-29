@@ -29,6 +29,11 @@ export default function Footer1() {
                     <span className="title">Email:</span>
                     <div className="text"><a target="_blank"     rel="noopener noreferrer" href="mailto:info@elmiralojstik.com">info@elmiralojstik.com</a></div>
                 </li>
+
+
+             
+
+
                 <li>
                     <i className="icon lnr-icon-map-marker"></i>
                     <span className="title">Address:</span>
@@ -117,6 +122,8 @@ export default function Footer1() {
                             <li><a target="_blank"     rel="noopener noreferrer"><i className="fab fa-facebook"></i></a></li>
                             <li><a target="_blank"     rel="noopener noreferrer" ><i className="fab fa-pinterest"></i></a></li>
                             <li><a target="_blank"     rel="noopener noreferrer" ><i className="fab fa-instagram"></i></a></li>
+
+                            <li><a target="_blank"     rel="noopener noreferrer" ><i className="fab fa-whatsapp"></i></a></li>
                         </ul>
                         </div>
                     </div>

@@ -46,9 +46,9 @@ const LayoutComp = ({ programs, programsArabic, contact, children }) => {
           rel="icon"
           href="/logo.png"
           type="image/x-icon"
-          sizes="16x16"
+          sizes="32x32"
        />
-        <title>QMED - Software, SaaS &amp; Digital Agency Template</title>
+        <title> شركة شحن الميرا لوجستك &amp; الميرا لوجستك </title>
       </head>  
 
 

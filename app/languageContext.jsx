@@ -10,8 +10,8 @@ export function LanguageProvider({ children }) {
     setMounted(true)
     // Load language from localStorage (or use default if not found)
     const savedLanguage =
-      typeof window !== 'undefined' ? localStorage.getItem('language') : 'en'
-    setLanguage(savedLanguage || 'en')
+      typeof window !== 'undefined' ? localStorage.getItem('language') : 'ar'
+    setLanguage(savedLanguage || 'ar')
   }, [])
 
   useEffect(() => {
