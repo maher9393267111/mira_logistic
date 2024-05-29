@@ -28,8 +28,8 @@ export default function Home({services , faqs ,newsdata , comments}) {
                 <Features />
                 <About1 />
               
-                <Process />
-                <CallToAction />
+                {/* <Process /> */}
+                {/* <CallToAction /> */}
                
                 
                 <Form />

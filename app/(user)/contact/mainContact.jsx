@@ -22,7 +22,7 @@ const ContactMain = () => {
 
     const touch =  lang === 'en' ? "Get in touch with us": lang === 'ar' ? "ابق على تواصل معنا" : "Bizimle ilitisme geçin"
   
-    const fomrtitle  =  lang === 'en' ? "Feel free to write": lang === 'ar' ? "لا تتردد في الكتابة" : "Yazmaktan çekinmeyin"
+    const fomrtitle  =  lang === 'en' ? "Feel free to write": lang === 'ar' ? "ارسل استفسارك" : "Yazmaktan çekinmeyin"
 
 
 
@@ -157,8 +157,8 @@ const ContactMain = () => {
               </div>
               <div className="mb-5 arabic">
                 <input name="form_botcheck" className="form-control" type="hidden" value="" />
-                <button type="submit" className="theme-btn btn-style-one" data-loading-text="Please wait..."><span className="btn-title">Send message</span></button>
-                <button type="reset" className="theme-btn btn-style-one ml-25"><span className="btn-title">Reset</span></button>
+                <button type="submit" className="theme-btn btn-style-one" data-loading-text="Please wait..."><span className="btn-title">{t?.send}</span></button>
+                {/* <button type="reset" className="theme-btn btn-style-one ml-25"><span className="btn-title">Reset</span></button> */}
               </div>
             </form>
             {/* Contact Form Validation */}

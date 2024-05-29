@@ -1,17 +1,37 @@
 import Link from "next/link"
+import { useLanguageContext } from "../../app/languageContext";
 const Banner = () => {
+
+  const { language :lang } = useLanguageContext()
+
+  const title =lang === 'en' ? "Best logistic service in the world" : lang === 'ar' ? "أفضل خدمة لوجستية في العالم" : "DÜNYANIN EN İYİ LOJİSTİK HİZMETİ"
+
+  const subtitle =lang === 'en' ? "Trust our services" : lang === 'ar' ? "ثق بخدماتنا" : "Hizmetlerimize güvenin"
+
+
+//Trust our services-
+
+
     return (
         <>
         <section className="banner-section-one">
           <div className="bg bg-image" style={{ backgroundImage: 'url(/images/main-slider/2.jpg)' }}></div>
           <div className="bottom-shape"></div>
         
-          <div className="auto-container">
+          <div className="auto-container arabic">
             <div className="image-box wow slideInRight" data-wow-delay="2000ms"><figure className="image"><img src="/images/main-slider/truck2.png" alt=""/></figure></div>
             <div className="content-box">
-              <div className="title-box">
-                <span className="sub-title wow fadeInUp">Best logistic service in the world</span>
-                <h1 className="title wow fadeInUp" data-wow-delay="600ms">Reliable & Safes<br className="d-none d-xl-block"/> Transport Solution<br className="d-none d-xl-block"/> From Miami</h1>
+              <div className="title-box arabic">
+                <span className="sub-title wow fadeInUp">{title}</span>
+                <h1 className="title wow fadeInUp" data-wow-delay="600ms">
+                  {/* Reliable & Safes */}
+                
+                {subtitle}
+                  
+                  
+                  {/* <br className="d-none d-xl-block"/> Transport Solution<br className="d-none d-xl-block"/> From Miami */}
+                  
+                  </h1>
               </div>
               <Link href="page-about" className="theme-btn btn-style-one wow fadeInUp" data-wow-delay="1200ms"><span className="btn-title">Know More us</span></Link>
               <span className="icon icon-plane"></span>
