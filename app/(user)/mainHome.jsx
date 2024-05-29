@@ -26,7 +26,7 @@ export default function Home({services , faqs ,newsdata , comments ,about}) {
                 <Testimonial1 comments={comments} />
 
                 <About1 about ={about} />
-                <Features />
+                {/* <Features /> */}
                
               
                 {/* <Process /> */}

@@ -22,12 +22,12 @@ export default function Footer1() {
                 <li>
                     <i className="icon lnr-icon-smartphone"></i>
                     <span className="title">Phone:</span>
-                    <div className="text"><a target="_blank" href="tel:+0123456789">+905433053212</a></div>
+                    <div className="text"><a target="_blank"     rel="noopener noreferrer" href="tel:+0123456789">+905433053212</a></div>
                 </li>
                 <li>
                     <i className="icon lnr-icon-location"></i>
                     <span className="title">Email:</span>
-                    <div className="text"><a target="_blank" href="mailto:info@elmiralojstik.com">info@elmiralojstik.com</a></div>
+                    <div className="text"><a target="_blank"     rel="noopener noreferrer" href="mailto:info@elmiralojstik.com">info@elmiralojstik.com</a></div>
                 </li>
                 <li>
                     <i className="icon lnr-icon-map-marker"></i>
@@ -128,7 +128,10 @@ export default function Footer1() {
                 <div className="footer-bottom">
                 <div className="auto-container">
                     <div className="inner-container">
-                    <div className="copyright-text">&copy; Copyright reserved by <Link href="/">kodesolution.com</Link></div>
+                    <div className="copyright-text">
+                        {/* &copy; Copyright reserved by <Link href="/">kodesolution.com</Link> */}
+                        
+                        </div>
                     </div>
                 </div>
                 </div>
