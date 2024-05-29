@@ -41,7 +41,7 @@ export const schemaTypes = [
      Partners,
    //  AboutAwards,
    //  AboutDiscover,
-  //   Faqs,
+     Faqs,
      Contact,
   //   homeCauseSlider,
  //    Brands,

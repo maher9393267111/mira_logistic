@@ -12,6 +12,17 @@ export const Faqs = defineType({
     }),
 
 
+    defineField({
+      name: "headingar",
+      type: "string",
+    }),
+
+    defineField({
+      name: "headingtr",
+      type: "string",
+    }),
+
+
     {
         name: "list",
         type: "array",
@@ -24,6 +35,9 @@ export const Faqs = defineType({
                 name: "answer",
                 type: "string",
                 title: "Answer",
+
+
+
               },
 
               {
@@ -37,6 +51,69 @@ export const Faqs = defineType({
           },
         ],
       },
+
+
+
+      {
+        name: "listar",
+        type: "array",
+        title: "ListAr",
+        of: [
+          {
+            type: "object",
+            fields: [
+              {
+                name: "answer",
+                type: "string",
+                title: "Answer",
+
+
+                
+              },
+
+              {
+                name: "question",
+                type: "string",
+                title: "Question",
+              },
+            ],
+  
+            // show icon instead of icon name
+          },
+        ],
+      },
+
+
+
+      {
+        name: "listtr",
+        type: "array",
+        title: "ListTr",
+        of: [
+          {
+            type: "object",
+            fields: [
+              {
+                name: "answer",
+                type: "string",
+                title: "Answer",
+
+
+                
+              },
+
+              {
+                name: "question",
+                type: "string",
+                title: "Question",
+              },
+            ],
+  
+            // show icon instead of icon name
+          },
+        ],
+      },
+
 
 
   

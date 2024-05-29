@@ -10,18 +10,23 @@ import News1 from "../../components/sections/News1"
 import Process from "../../components/sections/Process"
 import Services1 from "../../components/sections/Services1"
 import Testimonial1 from "../../components/sections/Testimonial1"
-export default function Home({services}) {
+export default function Home({services , faqs}) {
 
     return (
         <>
             <Layout headerStyle={1} footerStyle={1}>
                 <Banner />
+
+                <Services1 services={services} />
+
+                <Faq faqs={faqs} />
+
                 <Features />
                 <About1 />
-                <Services1 services={services} />
+              
                 <Process />
                 <CallToAction />
-                <Faq />
+               
                 <Testimonial1 />
                 <Form />
                 <News1 />

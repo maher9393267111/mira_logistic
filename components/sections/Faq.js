@@ -1,5 +1,16 @@
 import { useState } from 'react'
-const Faq = () => {
+import urlFor from '../../lib/urlFor';
+import { useLanguageContext } from '../../app/languageContext';
+const Faq = ({faqs}) => {
+
+  const { language :lang } = useLanguageContext()
+
+  const dir = lang === 'ar' && 'rtl'
+ const list = lang === 'en' ? faqs?.list : lang === 'ar' ? faqs?.listar : faqs?.listtr
+
+
+
+
   const [isActive, setIsActive] = useState({
       status: false,
       key: 1,
@@ -34,44 +45,35 @@ const Faq = () => {
               <div className="faq-column col-lg-6">
 
                 <div className="inner-column">
-                  <div className="sec-title">
-                    <span className="sub-title">check our faqs</span>
-                    <h2>People frequently asked <br/>few <span className="color1">questions</span></h2>
+                  <div dir={lang === 'ar' && 'rtl'} className="sec-title">
+                    {/* <span className="sub-title">check our faqs</span> */}
+                    <h2> {lang === 'en' ? faqs.heading : lang === 'ar' ? faqs?.headingar : faqs?.headingtr} <br/>
+                    {/* few <span className="color1"
+                    
+                    >questions</span> */}
+                    </h2>
                   </div>
-                  <ul className="accordion-box wow fadeInRight">
+                  <ul dir={lang === 'ar' && 'rtl'} className="accordion-box wow fadeInRight">
 
-                    <li className="accordion block">
-                      <div className={isActive.key == 1 ? "acc-btn active" : "acc-btn"} onClick={() => handleClick(1)}>How to get free support?
+
+
+                  {list?.map((e, i) => (
+
+                    <li key={i} className="accordion block">
+                      <div className={isActive.key == i ? "acc-btn active" : "acc-btn"} onClick={() => handleClick(i)}>
+                        {e?.answer}
                         <div className="icon fa fa-angle-right"></div>
                       </div>
-                      <div className={isActive.key == 1 ? "acc-content current" : "acc-content"}>
+                      <div className={isActive.key == i ? "acc-content current" : "acc-content"}>
                         <div className="content">
-                          <div className="text">Sed rhoncus facilisis purus, at accumsan purus sagittis vitae. Nullam acelit at eros imperdiet. Pellentesque sit.</div>
+                          <div className="text">{e?.question}.</div>
                         </div>
                       </div>
                     </li>
 
-                    <li className="accordion block">
-                      <div className={isActive.key == 2 ? "acc-btn active" : "acc-btn"} onClick={() => handleClick(2)}>Which goods you want to transport?
-                        <div className="icon fa fa-angle-right"></div>
-                      </div>
-                      <div className={isActive.key == 2 ? "acc-content current" : "acc-content"}>
-                        <div className="content">
-                          <div className="text">Sed rhoncus facilisis purus, at accumsan purus sagittis vitae. Nullam acelit at eros imperdiet. Pellentesque sit.</div>
-                        </div>
-                      </div>
-                    </li>
 
-                    <li className="accordion block">
-                      <div className={isActive.key == 3 ? "acc-btn active" : "acc-btn"} onClick={() => handleClick(3)}>What is our transport necessity?
-                        <div className="icon fa fa-angle-right"></div>
-                      </div>
-                      <div className={isActive.key == 3 ? "acc-content current" : "acc-content"}>
-                        <div className="content">
-                          <div className="text">Sed rhoncus facilisis purus, at accumsan purus sagittis vitae. Nullam acelit at eros imperdiet. Pellentesque sit.</div>
-                        </div>
-                      </div>
-                    </li>
+                  ))}
+                  
                   </ul>
                 </div>
               </div>

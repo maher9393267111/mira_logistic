@@ -12,12 +12,12 @@ const Process = ({ addClass }) => {
       count:"02",
       description: "Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet."
   },
-  {
-      icon: "icon flaticon-cargo",
-      title:"Ready to send your goods",
-      count:"03",
-      description: "Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet."
-  }
+  // {
+  //     icon: "icon flaticon-cargo",
+  //     title:"Ready to send your goods",
+  //     count:"03",
+  //     description: "Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet."
+  // }
 ];
     return (
         <>

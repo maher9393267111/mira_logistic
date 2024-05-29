@@ -26,129 +26,21 @@ const servicesquery = groq`
 
 
 
-
-const blogsquery = groq`
-  *[_type=='post'] {
-    ...,
-    categories[]-> 
-    
-  } | order(_createdAt desc)
-  [0...3]
-`;
-
-
-
-
-const productsquery = groq`
-  *[_type=='product'] {
-    ...,
-    
-    
-  } | order(_createdAt desc)
-  [0...3]
-`;
-
-const bannerquery = groq`
-  *[_type=='Homebanner'] {
-    ...,
-    "video": video.asset->url,
-   
-  } | order(_createdAt desc)
-`;
-
-const onequery = groq`
-  *[_type=='homeone'] {
-    ...
-    
-   
-  } | order(_createdAt desc)
-`;
-
-// const servicesquery = groq`
-//   *[_type=='service'] {
-//     ...
-
-//   } | order(_createdAt desc)
-// `;
-
-//workprocess
-
-// const workPorocessquery = groq`
-//   *[_type=='workprocess'] {
-//     ...
-
-//   } | order(_createdAt desc)
-// `;
-
-//homeapproach
-
-// const approachquery = groq`
-//   *[_type=='homeapproach'] {
-//     ...
-
-//   } | order(_createdAt desc)
-// `;
-
-//clientcomments"
-
-// const clientsquery = groq`
-//   *[_type=='clientcomments'] {
-//     ...
-
-//   } | order(_createdAt desc)
-// `;
-
-// const casestudyquery = groq`
-//   *[_type=='casestudy'] {
-//     ...
-
-//   } | order(_createdAt desc)
-// `;
-
-const contactquery = groq`
-  *[_type=='contact'] {
-    ...,
-    
-    
-  } | order(_createdAt desc)
-`;
-
-//homeCauseSlider
-// const caseInfoquery = groq`
-//   *[_type=='homeCasesSlider'] {
-//     ...,
-
-//   } | order(_createdAt desc)
-// `;
-
-// const casesquery = groq`
-//   *[_type=='casestudy'] {
-//     ...,
-
-//   } | order(_createdAt desc)
-//   [0...4]
-// `;
-
-const aboutOnequery = groq`
-  *[_type=='aboutOne']{
+const query = groq`
+  *[_type=='faqs']{
     ...,
     
   } | order(_createdAt desc)
 `;
 
-// const brandsquery = groq`
-//   *[_type=='brands']{
-//     ...,
 
-//   } | order(_createdAt desc)
-// `;
 
-// const showcasequery = groq`
-//   *[_type=='showCase']{
-//     ...,
 
-//   } | order(_createdAt desc)
-// `;
+
+
+
+
+
 
 export const metadata = {
   icons: {
@@ -157,8 +49,9 @@ export const metadata = {
 };
 const HomePage = async () => {
   const services = await client.fetch(servicesquery);
+  const faqsData = await client.fetch(query);
 
-  console.log("SERVICES-->" , services)
+  console.log("SERVICES-->" , faqsData)
 
 
 
@@ -167,7 +60,7 @@ const HomePage = async () => {
     <>
       <div className="arabic">
 
-<Home services={services}/>
+<Home services={services} faqs={faqsData[0]}/>
 
 
 
