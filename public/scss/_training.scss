@@ -1,0 +1,47 @@
+/*** 
+====================================================================
+    Training Section 
+====================================================================
+
+***/
+
+.training-section{
+  position: relative;
+  padding: 120px 0;
+  .sec-title{
+    padding-left: 300px;
+    padding-right: 200px;
+    .theme-btn{
+      box-shadow: 0 5px 30px rgba(0,0,0,.10);
+      position: absolute;
+      right: 0;
+      top: 45px;
+    }
+    @include for-lg{
+      padding-left: 0;
+    }
+    @include for-sm{
+      padding-right: 0;
+      .theme-btn{
+        margin-top: 30px;
+        position: relative;
+        top: 0;
+      }
+    }
+  }
+  .bg-image{
+    max-width: 31.4%;
+    top: 120px;
+    bottom: 0;
+    height: auto;
+    @include for-xxl{
+      width: 28%;
+    }
+    @include for-xl{
+      width: 25%;
+    }
+    @include for-lg {
+      display: none;
+    }
+  }
+}

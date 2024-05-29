@@ -1,0 +1,457 @@
+/*** 
+
+====================================================================
+    Services Section
+====================================================================
+
+***/
+
+.services-section {
+    position: relative;
+    padding: 120px 0 90px;
+    z-index: 2;
+    .sec-title{
+        margin-bottom: 30px;
+    }
+}
+
+.service-block{
+    position: relative;
+    margin-bottom: 30px;
+    z-index: 1;
+    .inner-box {
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+        transition: all 300ms ease;
+        &:hover {
+            .image-box{
+                .title{
+                    @include fade-out;
+                }
+                .icon{transform: rotate(180deg) scale(-1)}
+            }
+            .content-box{
+                @include fade-in;
+                transform: translateY(0);
+            }
+        }
+    }
+    .image-box{
+        position: relative;
+        overflow: hidden;
+        border-radius: 5px;
+        .image{
+            margin-bottom: 0;
+            &:before{
+                @include overlay;
+                background: linear-gradient(to top, var(--bg-theme-color1), transparent);
+                content: "";
+                border-radius: 5px;
+            }
+            img{
+                width: 100%;
+                min-height: 248px;    
+                object-fit: cover;
+            }
+        }
+        .icon{
+            position: absolute;
+            right: 25px;
+            top: 25px;
+            height: 57px;
+            width: 57px;
+            color: #fff;
+            @include flex-center;
+            background-color: var(--bg-theme-color3);
+            border-radius: 50%;
+            font-size: 20px;
+            z-index: 9;
+            transition: all 300ms ease;
+            &:after{
+                position: absolute;
+                left: -6px;
+                top: -6px;
+                right: -6px;
+                bottom: -6px;
+                border: 1px solid rgba(255, 255, 255, .2);
+                border-radius: 50%;
+                content: "";
+            }
+        }
+        .title{
+            position: absolute;
+            left: 30px;
+            bottom: 25px;
+            color: #fff;
+            margin-bottom: 0;
+            transition: all 300ms ease;
+        }
+    }
+
+    .content-box{
+        position: absolute;
+        right: 15px;
+        left: 15px;
+        bottom: 15px;
+        background-color: #ffffff;
+        padding: 16px 20px 15px;
+        border-radius: 5px;
+        @include fade-out;
+        transform: translateY(10px);
+        .title{
+            margin-bottom: 8px;
+        }
+        .text{
+            font-size: 13px;
+            line-height: 26px;
+            margin-bottom: 10px;
+            @include for-lg{
+                line-height: 20px;
+            }
+        }
+        .read-more{
+            font-size: 13px;
+            line-height: 18px;
+            color: var(--theme-color1);
+            text-transform: uppercase;
+            letter-spacing: .01em;
+            font-weight: 800;
+            i{
+                font-size: 14px;
+                color: var(--theme-color2);
+                display: inline-block;
+                margin-left: 3px;
+            }
+        }
+    }
+}
+
+.home1-service-block{
+  position: relative;
+  .inner-box{
+    position: relative;
+    background-color: #ffffff;
+    overflow: hidden;
+    &:hover{
+      .overlay{
+        @include fade-in;
+        left: 0;
+        width: 100%;
+        .read-more{
+          @include fade-in;
+          transition-delay: 300ms;
+          top: 0;
+        }
+      }
+      .lower-content{
+        .read-more{
+          @include fade-out;
+          right: 0px;
+        }
+      }
+      .image{
+        img{
+          transform: scale(1.1) rotate(-1deg);
+        }
+      }
+    }
+  }
+  .image-box{
+    overflow: hidden;
+    position: relative;
+    .image {
+      border-bottom: 4px solid var(--border-theme-color1);
+      margin-bottom: 0;
+      overflow: hidden;
+      position: relative;
+      img{
+        transition: all 300ms ease;
+      }
+    }
+    .overlay{
+      @include overlay;
+      @include flex-center;
+      left: 50%;
+      width: 0;
+      transition: all 300ms ease;
+      &::before{
+        @include overlay;
+        background-color: var(--bg-theme-color1);
+        content: "";
+        opacity: .9;
+      }
+      .read-more{
+        @include flex-center;
+        background-color: #fff;
+        border-radius: 50%;
+        color: var(--theme-color1);
+        height: 52px;
+        overflow: hidden;
+        position: relative;
+        top: 20px;
+        width: 52px;
+        @include fade-out;
+      }
+    }
+  }
+  .lower-content{
+    position: relative;
+    padding: 25px 40px 30px;
+    .read-more {
+      @include flex-center;
+      background-color: var(--bg-theme-color1);
+      border-radius: 50%;
+      color: #ffffff;
+      height: 52px;
+      overflow: hidden;
+      position: absolute;
+      right: 30px;
+      top: -28px;
+      width: 52px;
+      transition: all 300ms ease;
+    }
+    .title{
+      letter-spacing: -.04em;
+      margin-bottom: 15px;
+      a:hover{
+        color: var(--theme-color3);
+      }
+    }
+  }
+  @include for-md{
+    margin-bottom: 30px;
+  }
+}
+
+.cta-block{
+    position: relative;
+    margin-bottom: 30px;
+    .inner-box{
+        position: relative;
+        background-color: var(--bg-theme-color2);
+        padding: 40px 50px 50px;
+        height: 100%;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        @include for-lg{
+            padding: 40px 40px;
+        }
+        &:before{
+            @include overlay;
+            background-image: url(../images/icons/shape-2.png);
+            @include background;
+            content: "";
+        }
+    }
+    .title{
+        color: #fff;
+    }
+}
+
+/*** 
+
+====================================================================
+    Services Section Two
+====================================================================
+
+***/
+
+/* Service Block Home 2 */
+.services-section-home2
+{
+    background-image: url(../images/background/service-bg-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 120px 0 90px;
+}
+.home2-service-slider.owl-carousel .owl-stage-outer
+{
+    display: inline-block;
+}
+.home1-service-slider .owl-nav,
+.home2-service-slider .owl-nav{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    left: auto;
+    max-width: 160px;
+    opacity: 1;
+    right: 0;
+    top: -100px;
+    @media (max-width: 991.98px) {
+        top: 0;
+    }
+    @include for-md{
+        position: relative;
+        transform: translateY(0%);
+    }
+}
+.home1-service-slider .owl-nav .owl-prev,
+.home1-service-slider .owl-nav .owl-next,
+.home2-service-slider .owl-nav .owl-prev,
+.home2-service-slider .owl-nav .owl-next{
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.08);
+    font-size: 20px;
+    height: 60px;
+    line-height: 60px;
+    width: 60px;
+}
+.home1-service-slider .owl-nav .owl-prev:hover,
+.home1-service-slider .owl-nav .owl-next:hover,
+.home2-service-slider .owl-nav .owl-prev:hover,
+.home2-service-slider .owl-nav .owl-next:hover{
+    background-color: var(--theme-color1);
+    color: var(--theme-color-light);
+}
+.service-block-home2
+{
+    position: relative;
+    margin-bottom: 30px;
+    z-index: 1;
+}
+.service-block-home2 .inner-box
+{
+    position: relative;
+    background: #ffffff;
+    padding: 40px 60px 35px 30px;
+    transition: all 300ms ease;
+    box-shadow: 0 1px 20px 0 rgba(0,0,0,0.08);
+    &:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .10);
+    }
+}
+.service-block-home2 .icon
+{
+    position: absolute;
+    right: 0;
+    top: -30px;
+    height: 100px;
+    width: 100px;
+    background: var(--bg-theme-color1);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    font-size: 54px;
+    transition: all 300ms ease;
+    @media (max-width: 376px) {
+        font-size: 44px;
+        height: 70px;
+        width: 70px;
+    }
+}
+.service-block-home2:hover .icon
+{
+    background-color: var(--theme-color3);
+}
+.service-block-home2 h4
+{
+    color: var(--theme-color3);
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    a {
+        color: var(--theme-color3);
+        transition: all 300ms ease;
+        &:hover {
+            color: var(--theme-color1);
+        }
+    }    
+}
+.service-block-home2 .text
+{
+    font-size: 16px;
+    line-height: 32px;
+    color: #7c858c;
+    min-height: 96px;
+    margin-bottom: 20px;
+}
+.service-block-home2 .read-more
+{
+    background-color: var(--bg-theme-color3);
+    color: #fff;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 25px;
+    padding: 10px 30px;
+    letter-spacing: 1px;
+    position: absolute;
+    right: 45px;
+    top: 70px;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+    transform-origin: right top;
+    transition: all 300ms ease;
+}
+.service-block-home2:hover .read-more
+{
+    background-color: var(--theme-color1);
+}
+.service-block-home2 .image
+{
+    position: relative;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+.service-block-home2 .image img:first-child
+{
+    bottom: 0px;
+    filter: blur(10px);
+    left: 0px;
+    opacity: 0;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 1;
+    transform: translateX(50%) scaleX(2);
+}
+.service-block-home2:hover .image img:first-child
+{
+    filter: blur(0);
+    opacity: 1;
+    transform: translateX(0) scaleX(1);
+    -webkit-filter: blur(0);
+}
+.service-block-home2:hover .image img:nth-child(2)
+{
+    transform: translateX(-50%) scaleX(2);
+    opacity: 0;
+    filter: blur(10px);
+}
+.service-block-home2 .image img
+{
+    display: block;
+    position: relative;
+    transition: all 500ms ease;
+    width: 100%;
+}
+
+
+
+/*** 
+
+====================================================================
+    Services Section Three
+====================================================================
+
+***/
+.services-section-three{
+    position: relative;
+    padding: 120px 0 90px;    
+}
+.home1-service-block{
+    .image-box{
+        img{
+            width: 100%;
+        }
+    }
+}
+.services-section-home2 .carousel-outer {
+    margin: 0 -400px 0 0;
+}

@@ -1,0 +1,149 @@
+/*** 
+
+====================================================================
+    Pricing Section 
+====================================================================
+
+***/
+
+.pricing-section{
+    position: relative;
+    padding: 120px 0 90px;
+    .sec-title {
+        margin-bottom: 45px;
+    }
+}
+
+.pricing-block{
+    margin-bottom: 30px;
+    .inner-box{
+        position: relative;
+        border: 2px solid #dbdbdb;
+        padding: 30px 59px 60px;
+        transition: all 400ms ease;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-color: var(--theme-color-dark);
+        max-width: 400px;
+        margin: 0 auto;
+        @include media-breakpoint-down(xl){
+            padding: 30px 30px 50px;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            height: 344px;
+            background-color: var(--bg-theme-color2);
+            clip-path: polygon(0 0, 0% 100%, 100% 0);            
+        }
+        
+        &::before{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--theme-color-light);
+            transition: all 500ms ease;
+        }
+        &:hover{
+            &::before{
+                height: 0;
+            }
+            .title{
+                color: var(--theme-color-light);
+            }
+            .price {
+                small{
+                    color: var(--theme-color-light);
+                }
+            } 
+            .list-style {    
+                li{
+                   color: var(--theme-color-light);
+                }
+            }
+            .image{
+                img{
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .image{
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+            border-radius: 50%;
+            z-index: 1;
+            margin:0 0 30px;
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+                transition: all 300ms ease;
+            }
+        }
+        .title{
+            position: relative;
+            color: var(--theme-color-dark);
+            font-size: 30px;
+            font-weight: 900;
+            margin-bottom: 8px;
+            z-index: 2;
+            text-transform: uppercase;
+            @include media-breakpoint-down(xl){
+                font-size: 26px;
+            }
+            a:hover {
+                color: var(--theme-color1);
+            }
+        }
+        .price{
+            position: relative;
+            color: var(--theme-color1);
+            font-size: 30px;
+            font-weight: 800;
+            margin-bottom: 30px;
+            small{
+                color: var(--theme-color-dark);
+                font-size: 14px;
+                font-weight: 800;
+                transition: all 300ms ease;
+            }
+        }
+        .list-style{
+            position: relative;
+            margin-bottom: 30px;
+            li{
+                position: relative;
+                margin-bottom: 12px;
+                font-weight: 500;
+                color:#444444;
+                padding-left: 30px;
+                transition: all 300ms ease;
+                .icon{
+                    position: absolute;
+                    left: 0;
+                    top: 2px;
+                    margin-right: 7px;
+                }
+            }
+        }
+        .theme-btn {
+            padding: 19px 55px;
+        }
+    }
+}
+.icon-arrow {
+  background-image: url(../images/icons/icon-check.png);
+  height: 19px;
+  width: 21px;
+}

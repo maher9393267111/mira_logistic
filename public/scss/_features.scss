@@ -1,0 +1,223 @@
+/*** 
+
+====================================================================
+    Features Section
+====================================================================
+
+***/
+
+.features-section {
+  position: relative;
+  padding: 120px 0 90px;
+  z-index: 2;
+}
+.feature-block-two{
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+  .inner-box {
+    margin-bottom: 20px;
+    position: relative;
+    transition: all 300ms ease;
+    z-index: 2;
+    &:hover{
+      .step{
+        @include fade-out;
+      }
+      .overlay-content{
+        @include fade-in;
+        transform: scale(1);
+        .read-more{
+          @include fade-in;
+          bottom: -20px;
+        }
+      }
+      .image{
+        img{
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  .image {
+    border-radius: 5px;
+    margin-bottom: 0;
+    overflow: hidden;
+    position: relative;
+    img {
+      min-height: 260px;
+      object-fit: cover;
+      transition: all 300ms ease;
+      width: 100%;
+    }
+  }
+  .step{
+    bottom: 20px;
+    font-size: 20px;
+    letter-spacing: -.04em;
+    left: 20px;
+    position: absolute;
+    right: 20px;
+  }
+  .overlay-content{
+    @include overlay;
+    padding: 55px 40px 40px;
+    @include fade-out;
+    transform: scale(.7);
+    &::before{
+      @include overlay;
+      background-color: var(--bg-theme-color3);
+      opacity: .85;
+      content: "";
+    }
+    @include for-xxs{
+      padding: 40px 30px 30px;
+    }
+    .title-box{
+      align-items: center;
+      display: flex;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .icon{
+      color: var(--theme-color2);
+      font-size: 58px;
+      margin-right: 10px;
+      position: relative;
+      @include for-xxs{
+        display: none;
+      }
+    }
+    .title {
+      color: #fff;
+      margin-bottom: 0px;
+      transition: all 300ms ease;
+    }
+    .text{
+      color: rgba(255,255,255,.7);
+      font-size: 15px;
+      line-height: 26px;
+      position: relative;
+    }
+    .read-more{
+      bottom: 10px;
+      font-size: 14px;
+      line-height: 20px;
+      padding: 10px 30px;
+      position: absolute;
+      right: 30px;
+      @include fade-out;
+    }
+  }
+}
+
+
+/*** 
+
+====================================================================
+    Features Section Two
+====================================================================
+
+***/
+
+.features-section-two{
+  position: relative;
+  z-index: 3;
+  .outer-box{
+    background-color: var(--bg-theme-color1);
+    background-image: url(../images/icons/map3.png);
+    border-radius: 5px;
+  }
+  .title-column{
+    .inner-column{
+      padding: 75px 60px 0;
+      @include for-md{
+        padding: 75px 0 0 60px;
+      }
+      @include for-sm{
+        padding: 60px 30px 0;
+      }
+    }
+    .sec-title{
+      .sub-title{
+        color: #d5eaff;
+      }
+    }
+  }
+  .features-column{
+    .inner-column{
+      height: 100%;
+      margin-left: -75px;
+      padding: 75px 0 0;
+      padding-right: 30px;
+      position: relative;
+      @include for-lg{
+        margin-left: 0;
+      }
+      @include for-sm{
+        padding: 0 30px 40px;
+      }
+    }
+    .list-style-two{
+      li i,
+      li{color: #ffffff;}
+    }
+    .image{
+      margin-bottom: 0;
+      position: absolute;
+      right: -33px;
+      top: -58px;
+      @include for-lg{
+        display: none;
+      }
+    }
+  }
+}
+.features-list{
+  position: relative;
+  li{
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+    &:before{
+      color: var(--theme-color2);
+      content: "\f0a9";
+      font-family: "Font Awesome 5 Free";
+      font-size: 14px;
+      font-weight: 900;
+      left: 0;
+      line-height: 26px;
+      position: absolute;
+      top: 0;
+    }
+  }
+}
+.feature-block-home2{
+  position: relative;
+  .icon{
+    color: var(--theme-color2);
+    font-size: 65px;
+    line-height: 50px;
+    position: relative;
+    transition: all 300ms ease;
+    &:after{
+      background-color: #2e2838;
+      border-radius: 50%;
+      content: "";
+      height: 54px;
+      left: -10px;
+      position: absolute;
+      top: -10px;
+      width: 54px;
+      z-index: -1;
+    }
+  }
+  &:hover{
+    .icon{
+      transform: scaleX(-1);
+    }
+  }
+}

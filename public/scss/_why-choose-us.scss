@@ -1,0 +1,368 @@
+/*** 
+
+====================================================================
+		Why Choose Us
+====================================================================
+
+***/
+
+.why-choose-us{
+    position: relative;
+    padding: 120px 0;
+    .bg{
+        max-height: 278px;
+        top: auto;
+        bottom: 0;
+    }
+
+    .bottom-text{
+        position: relative;
+        font-size: 14px;
+        color: #fff;
+        background-color: var(--bg-theme-color3);
+        border-radius: 50px;
+        line-height:20px;
+        min-height: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2px 2px;
+        padding-left: 40px;
+        max-width: 805px;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 10px;
+        .theme-btn{
+            line-height: 26px;
+        }
+        @include for-sm{
+            flex-direction: column;
+            text-align: center;
+            padding: 20px 20px;
+            border-radius: 10px;
+            .theme-btn{
+                margin-top: 15px;
+            }
+        }
+    }
+}
+.feature-block{
+    position: relative;
+    margin-bottom: 30px;
+    .inner-box{
+        position: relative;
+        padding: 30px 30px 25px;
+        padding-right: 120px;
+        border-radius: 5px;
+        background-color: #fff;
+        border: 1px solid #d4d9e6;
+        overflow: hidden;
+        &:before{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 0%;
+            background-color: var(--bg-theme-color2);
+            background-image: url(../images/icons/shape-1.png);
+            background-repeat: no-repeat;
+            background-position: center left;
+            content: "";
+            transition: all 300ms ease;
+        }
+        &:hover{
+            &::before{
+                height: 100%;
+            }
+            .icon{
+                background-color: #fff;
+            }
+            .title,
+            .cat{
+                color: #fff;
+            }
+        }
+    }
+    .icon{
+        position: absolute;
+        right: -25px;
+        top: -35px;
+        height: 125px;
+        width: 125px;
+        border-radius: 50%;
+        background-color: var(--bg-theme-color4);
+        color: var(--theme-color2);
+        font-size: 36px;
+        line-height: 1em;
+        padding-left: 40px;
+        padding-bottom: 30px;
+        display: flex;
+        align-items: flex-end;
+        transition: all 300ms ease;
+    }
+    .cat{
+        position: relative;
+        font-size: 13px;
+        line-height: 1em;
+        font-weight: 400;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: .04em;
+        margin-bottom: 20px;
+        transition: all 300ms ease;
+    }
+    .title{
+        margin-bottom: 0;
+    }
+}
+
+/*** 
+
+====================================================================
+    Why Choose Us Two
+====================================================================
+
+***/
+.why-choose-us-home2{
+    align-items: center;
+    display: flex;
+    max-height: 640px;
+    padding: 90px 0;
+    position: relative;
+    z-index: 1;
+    @media (max-width: 575.98px) {
+        max-height: initial;
+        padding: 0;
+    }
+    .bg-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 50%;
+        @include background;
+        z-index: 1;
+    }
+    .bg-shape{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 50%;
+        @include background;
+        @media (max-width: 1199.98px) {
+            width: 100%;
+        }
+        .shape{
+            background-color: var(--theme-color3);
+            position: absolute;
+            left: 0;
+            right: 0px;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+    .content-column {
+        position: relative;
+        .sec-title {
+            margin-bottom: 40px;
+            .sub-title {
+                color: #9898a0;
+            }
+            .text{
+                color: #9898a0;
+                font-size: 18px;
+                line-height: 34px;
+            }
+        }
+    }
+    .image-column{
+        position: relative;
+        .image-box.hide-desktop{
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .inner-column{
+            padding: 160px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+    }    
+}
+
+/*** 
+
+====================================================================
+    Why Choose Us Three
+====================================================================
+
+***/
+.why-choose-us-three{
+    position: relative;
+    padding: 120px 0 70px;
+    .content-column {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 50px;
+        .inner-column {
+            position: relative;
+            padding-right: 70px;
+            @include for-lg{
+                padding-right: 0;
+            }
+        }
+
+        .sec-title{
+            margin-bottom: 40px;
+        }
+
+        .feature-box{
+            position: relative;
+            padding-left: 100px;
+            padding-top: 5px;
+            min-height: 70px;
+            margin-bottom: 30px;
+            &:hover{
+                .icon{
+                    transform: scaleX(-1);
+                }
+            }
+            .icon{
+                position: absolute;
+                left: 0;
+                top: 0;
+                font-size: 64px;
+                line-height: 1em;
+                color: var(--theme-color1);
+                transition: all 300ms ease;
+                &:after{
+                    position: absolute;
+                    left: 25px;
+                    top: 15px;
+                    height: 54px;
+                    width: 54px;
+                    background-color:  #ebebeb;
+                    border-radius: 50%;
+                    z-index: -2;
+                    transition: all 300ms ease;
+                    content: "";
+                }
+            }
+        }
+
+        .theme-btn{
+            margin-top: 20px;
+        }
+    }
+
+    .image-column {
+        position: relative;
+        margin-bottom: 50px;
+        @include for-lg{
+            display: none;
+        }
+        .image-box{
+            position: relative;
+            margin-left: -24px;
+        }    
+        .image{
+            position: relative;
+            display: block;
+            background-color: var(--bg-theme-color1);
+            margin-bottom: 0;
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .info-column{
+        @include for-lg{
+            width: 100%;
+        }
+        .inner-column{
+            position: relative;
+            padding-left: 36px;
+            @include for-lg{
+                padding-left: 0;
+            }
+        }
+
+        .info{
+            position: relative;
+            padding-bottom: 30px;
+            border-bottom: 5px solid var(--bg-theme-color2);
+            margin-bottom: 40px;
+            &:last-child{
+                padding-bottom: 0;
+                margin-bottom: 0;
+                border-bottom: 0;
+            }
+            .title{
+                position: relative;
+                top: -5px;
+                margin-bottom: 5px;
+                @include for-md{
+                    br{
+                        display: none;
+                    }
+                }
+            }
+        }
+        .info-box{
+            position: relative;
+            padding: 30px 40px;
+            background-color: var(--bg-theme-color2);
+            margin-left: -60px;
+            margin-right: 70px;
+            margin-top: 24px;
+            @include for-lg{
+                margin-left: 0;
+                margin-right: 0;
+            }
+            @include for-md{
+                padding: 20px 30px;
+            }
+            &:before{
+                position: absolute;
+                left: -34px;
+                bottom: 0;
+                border-right: 35px solid var(--border-theme-color2);
+                border-top: 45px solid transparent;
+                content: "";
+                @include for-lg{
+                    display: none;
+                }
+            }
+            .icon{
+                display: block;
+                font-size: 36px;
+                color: var(--headings-color);
+                margin-bottom: 8px;
+            }
+            .title{
+                margin-bottom: 0;
+                @include for-md{
+                    br{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
