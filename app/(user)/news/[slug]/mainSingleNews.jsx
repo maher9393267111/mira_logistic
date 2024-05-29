@@ -4,7 +4,7 @@ import PageTitle from "../../../../components/sections/PageTitle"
 import ProjectDetails from "../../../../components/sections/innerpages/ProjectDetails"
 import { useLanguageContext } from "../../../languageContext"
 
-export default function SingleServiceMain({data}) {
+export default function SingleNewsMain({data}) {
 
   const { language :lang } = useLanguageContext()
 

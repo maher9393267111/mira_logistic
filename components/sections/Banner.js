@@ -3,7 +3,7 @@ const Banner = () => {
     return (
         <>
         <section className="banner-section-one">
-          <div className="bg bg-image" style={{ backgroundImage: 'url(images/main-slider/2.jpg)' }}></div>
+          <div className="bg bg-image" style={{ backgroundImage: 'url(/images/main-slider/2.jpg)' }}></div>
           <div className="bottom-shape"></div>
         
           <div className="auto-container">

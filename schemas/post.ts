@@ -6,16 +6,21 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'title',
-      title: 'Title',
-      type: 'string',
+      name: "heading",
+      type: "string",
+    }),
+
+
+    defineField({
+      name: "headingar",
+      type: "string",
     }),
 
     defineField({
-      name: 'titlear',
-      title: 'TitleAr',
-      type: 'string',
+      name: "headingtr",
+      type: "string",
     }),
+
 
     
     defineField({
@@ -23,41 +28,24 @@ export default defineType({
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'title',
+        source: 'heading',
         maxLength: 96,
       },
     }),
 
 
+
+
     defineField({
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: {type: 'author'},
-    }),
-    defineField({
-      name: 'mainImage',
-      title: 'Main image',
+      name: 'image',
+      title: 'Image',
       type: 'image',
       options: {
         hotspot: true,
       },
     }),
-    defineField({
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
-    }),
 
 
-
-    // defineField({
-    //   name: 'tags',
-    //   title: 'Tags',
-    //   type: 'array',
-    //   of: [{type: 'reference', to: {type: 'tag'}}],
-    // }),
 
 
     defineField({
@@ -81,6 +69,12 @@ export default defineType({
     }),
 
 
+    defineField({
+      name: 'bodytr',
+      title: 'BodyTr',
+      type: 'blockContent',
+    }),
+
 
 
     // defineField({
@@ -102,13 +96,13 @@ export default defineType({
 
   preview: {
     select: {
-      title: 'title',
-      author: 'author.name',
-      media: 'mainImage',
+      title: 'heading',
+      
+      media: 'image',
     },
     prepare(selection) {
-      const {author} = selection
-      return {...selection, subtitle: author && `by ${author}`}
+      
+      return {...selection}
     },
   },
 })

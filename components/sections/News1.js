@@ -1,6 +1,15 @@
 import Link from 'next/link';
+import urlFor from '../../lib/urlFor';
+import { useLanguageContext } from '../../app/languageContext';
+const News1 = ({newsdata}) => {  
 
-const News1 = () => {  
+  const { language :lang } = useLanguageContext()
+
+  const dir = lang === 'ar' && 'rtl'
+  const headTitle =lang === 'en' ? "Latest news"  : lang === 'ar' ? "اخر الاخبار" : "Son haberler"
+
+
+
   const data = [
   {
       img: "news-1.jpg",
@@ -26,25 +35,38 @@ const News1 = () => {
         <section className="news-section">
           <div className="auto-container">
             <div className="sec-title text-center">
-              <span className="sub-title">News & Updates</span>
-              <h2>Latest news directly <br/> from the <span className="color1">blog</span></h2>
+              {/* <span className="sub-title">News & Updates {newsdata?.length}</span> */}
+              <h2 className=' arabic'>
+                
+                
+{headTitle}
+
+
+              </h2>
             </div>
         
             <div className="row">
-            {data.map((item, i) => (
+            {newsdata?.map((item, i) => (
               <div key={i} className="news-block col-lg-4 col-md-6 wow fadeInUp">
                 <div className="inner-box">
                   <div className="image-box">
-                    <figure className="image"><a href="news-details.html"><img src={`/images/resource/${item.img}`} alt=""/></a></figure>
+                    <figure className="image"><a href="news-details.html"><img 
+
+src={urlFor(item?.image)?.url()} 
+                    // src={`/images/resource/${item.img}`}
+                    
+                    alt=""/></a></figure>
                     <span className="date">30 <span className="month">March</span></span>
                   </div>
-                  <div className="lower-content">
+                  <div dir={lang === 'ar' && 'rtl'} className="lower-content">
                     <ul className="post-info">
-                      <li><i className="fa fa-user-circle"></i>{item.authorTitle}</li>
-                      <li><i className="fa fa-comments"></i> 2 Comments</li>
+                      <li><i className="fa fa-user-circle"></i>Admin</li>
+                      {/* <li><i className="fa fa-comments"></i> 2 Comments</li> */}
                     </ul>
-                    <h4 className="title"><a href="news-details.html">{item.title}</a></h4>
-                    <div className="text">{item.text}</div>
+
+                    <h4 className="title"><Link href={`/news/${item?.slug?.current}`}>
+                      {lang === 'en' ? item?.heading : lang === 'ar' ? item?.headingar : item?.headingtr}</Link></h4>
+                    {/* <div className="text">{item.text}</div> */}
                   </div>
                 </div>
               </div>))}

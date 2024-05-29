@@ -35,6 +35,13 @@ const query = groq`
 
 
 
+const newsquery = groq`
+  *[_type=='post']{
+    ...,
+    
+  } | order(_createdAt desc)  [0...3]
+`;
+
 
 
 
@@ -51,6 +58,7 @@ const HomePage = async () => {
   const services = await client.fetch(servicesquery);
   const faqsData = await client.fetch(query);
 
+  const newsData = await client.fetch(newsquery);
   console.log("SERVICES-->" , faqsData)
 
 
@@ -60,7 +68,7 @@ const HomePage = async () => {
     <>
       <div className="arabic">
 
-<Home services={services} faqs={faqsData[0]}/>
+<Home newsdata={newsData} services={services} faqs={faqsData[0]}/>
 
 
 

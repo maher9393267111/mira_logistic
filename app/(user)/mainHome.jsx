@@ -10,7 +10,7 @@ import News1 from "../../components/sections/News1"
 import Process from "../../components/sections/Process"
 import Services1 from "../../components/sections/Services1"
 import Testimonial1 from "../../components/sections/Testimonial1"
-export default function Home({services , faqs}) {
+export default function Home({services , faqs ,newsdata}) {
 
     return (
         <>
@@ -21,6 +21,8 @@ export default function Home({services , faqs}) {
 
                 <Faq faqs={faqs} />
 
+                <News1  newsdata={newsdata} />
+
                 <Features />
                 <About1 />
               
@@ -29,7 +31,7 @@ export default function Home({services , faqs}) {
                
                 <Testimonial1 />
                 <Form />
-                <News1 />
+                
             </Layout>
         </>
     )
