@@ -70,7 +70,7 @@ const Services1 = ({services}) => {
                   {services?.map((item, index) => {
                   
                   return (
-                  <SwiperSlide>
+                  <SwiperSlide key={index}>
                     <div className="home1-service-block arabic">
                       <div className="inner-box">
                         <div className="image-box">
