@@ -166,7 +166,7 @@ body {
 p, .text {
   color: var(--text-color);
   font-size: var(--body-font-size);
-  font-family: var(--text-font);
+  /* font-family: var(--text-font); */
   font-weight: var(--body-font-weight);
   line-height: var(--body-line-height);
 }
@@ -174,7 +174,7 @@ p, .text {
 /* -------- Headings ---------- */
 h1, h2, h3, h4, h5, h6 {
   color: var(--headings-color);
-  font-family: var(--title-font);
+  /* font-family: var(--title-font); */
   position: relative;
   line-height: var(--line-height-heading-);
   letter-spacing: -0.04em;
@@ -3399,7 +3399,7 @@ Section Title
   position: relative;
   font-size: var(--sec-title-font-size);
   color: var(--sec-title-color);
-  font-family: var(--sec-title-font-family);
+  /* font-family: var(--sec-title-font-family); */
   font-weight: var(--sec-title-font-weight);
   letter-spacing: -0.04em;
   margin-bottom: 0;

@@ -43,7 +43,7 @@ const swiperOptions = {
         
     };
 const Services1 = ({services}) => {
-
+  
   const { language :lang } = useLanguageContext()
 
   const dir = lang === 'ar' && 'rtl'
@@ -54,13 +54,25 @@ const Services1 = ({services}) => {
 
     return (
         <>
-        <section className="training-section">
+        <section className="training-section arabic">
           <div className="bg bg-pattern-2"></div>
           <div className="bg bg-image" style={{ backgroundImage: 'url(images/resource/image-1.jpg)' }}></div>
           <div className="auto-container">
-            <div className="sec-title">
-              <span className="sub-title">Our Services {services?.length}</span>
-              <h2>Specialist logistics services <br/> that you <span className="color1">deserve</span></h2>
+            <div  dir={lang === 'ar' && 'rtl'} className="sec-title">
+              {/* <span className="sub-title">Our Services {services?.length}</span> */}
+              <h2 className="arabic">
+                
+              {lang === 'en' ? "Specialist logistics services" : lang === 'ar' ? "الخدمات اللوجستية المميزة" : "Uzman lojistik hizmetleri"}
+                
+                 <br/> 
+                 
+                 {lang === 'en' ? "That" : lang === 'ar' ? "" : ""}
+                 
+
+                  <span className="color1">
+                    
+                  {lang === 'en' ? "you deserve" : lang === 'ar' ? 'التي تستحقها' : "hak ettiğin"}
+                    </span></h2>
             </div>
       
             <div className="carousel-outer">
@@ -72,17 +84,17 @@ const Services1 = ({services}) => {
                   return (
                   <SwiperSlide key={index}>
                     <div className="home1-service-block arabic">
-                      <div className="inner-box">
+                      <div dir={lang === 'ar' && 'rtl'} className="inner-box">
                         <div className="image-box">
                           <figure className="image"><img 
                            src={urlFor(item?.image)?.url()} 
                           // src="/images/resource/service-1.jpg"
                            alt=""/></figure>
-                          <div className="overlay"><Link href="page-service-details" className="read-more"><i className="fa fa-long-arrow-alt-right"></i></Link></div>
+                          <div className="overlay"><Link              href={`/service/${item?.slug?.current}`} className="read-more"><i className="fa fa-long-arrow-alt-right"></i></Link></div>
                         </div>
                         <div className="lower-content">
                           <Link href="page-service-details" className="read-more"><i className="fa fa-long-arrow-alt-right"></i></Link>
-                          <h4 className="title arabic"><Link href="page-service-details">
+                          <h4 className="title arabic"><Link              href={`/service/${item?.slug?.current}`}>
                             
                             {lang === 'en' ? item?.heading : lang === 'ar' ? item?.headingar : item?.headingtr}
                           
