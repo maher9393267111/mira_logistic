@@ -2,7 +2,7 @@ import { DocumentTextIcon } from "@sanity/icons";
 import { defineField, defineType } from "sanity";
 
 export const clientcomments = defineType({
-  name: "clientcomments",
+  name: "comments",
   type: "document",
   title: "ClientComments",
   fields: [
@@ -51,7 +51,7 @@ export const clientcomments = defineType({
     prepare({ title, image }) {
       return {
         title: title || "Untitled",
-        subtitle: "ClientComments",
+        subtitle: "Comments",
         media: image || DocumentTextIcon,
       };
     },

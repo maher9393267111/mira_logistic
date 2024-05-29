@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
-
+import urlFor from "../../lib/urlFor";
+import { useLanguageContext } from "../../app/languageContext";
 const swiperOptions = {
         modules: [Autoplay, Pagination, Navigation],
         slidesPerView: 3,
@@ -40,74 +41,56 @@ const swiperOptions = {
 
         
     };
-const Testimonial1 = () => {
+const Testimonial1 = ( {comments}) => {
+
+  const { language :lang } = useLanguageContext()
+
+  const dir = lang === 'ar' && 'rtl'
+const title =   lang === 'en' ? "Our Customers Reviews" : lang === 'ar' ? "آراء زبائننا" : "Musteriliermiz Yorumlari"
+
+
+
     return (
         <>
         <section className="testimonial-section bg-light">
           <div className="dotted-map"></div>
           <div className="auto-container">
             <div className="sec-title text-center">
-              <span className="sub-title">Client’s Testimonials</span>
-              <h2>Here are some clients <br />feedbacks</h2>
+              {/* <span className="sub-title arabic">{title} </span> */}
+              <h2>{title}</h2>
             </div>
             <div className="outer-box">
               <Swiper {...swiperOptions} className="testimonial-carousel owl-carousel owl-theme">
                   {/* testimonial Block */}
-                  <SwiperSlide>
-                <div className="testimonial-block">
+
+
+
+
+                  {comments?.map((item, index) => {
+                  
+                  return (
+
+                  <SwiperSlide key={index}>
+                <div className="testimonial-block arabic">
                   <div className="inner-box">
                     <div className="content-box">
                       <div className="rating"><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star-half-alt"></i></div>
-                      <div className="text">“All of our lorries are fitted with Satellite Tracking high value and temperature sensitive loads can be monitored at all times.</div>
+                      <div className="text">“
+                      {item?.description}.</div>
                     </div>
-                    <div className="thumb"><img src="/images/resource/testi-thumb-1.jpg" alt="" /></div>
-                    <span className="designation">Co Founder</span>
-                    <h4 className="name">Jhon D. William</h4>
+                    <div className="thumb"><img
+                    src={urlFor(item?.image)?.url()}  
+                    //  src="/images/resource/testi-thumb-1.jpg"
+                     alt="" /></div>
+                    <span className="designation">{item?.userwork}</span>
+                    <h4 className="name">{item?.username}</h4>
                   </div>
                 </div>
                   </SwiperSlide>
-                  {/* testimonial Block */}
-                  <SwiperSlide>
-                <div className="testimonial-block">
-                  <div className="inner-box">
-                    <div className="content-box">
-                      <div className="rating"><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star-half-alt"></i></div>
-                      <div className="text">“All of our lorries are fitted with Satellite Tracking high value and temperature sensitive loads can be monitored at all times.</div>
-                    </div>
-                    <div className="thumb"><img src="/images/resource/testi-thumb-2.jpg" alt="" /></div>
-                    <span className="designation">Co Founder</span>
-                    <h4 className="name">Aleesha Brown</h4>
-                  </div>
-                </div>
-                  </SwiperSlide>
-                  {/* testimonial Block */}
-                  <SwiperSlide>
-                <div className="testimonial-block">
-                  <div className="inner-box">
-                    <div className="content-box">
-                      <div className="rating"><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star-half-alt"></i></div>
-                      <div className="text">“All of our lorries are fitted with Satellite Tracking high value and temperature sensitive loads can be monitored at all times.</div>
-                    </div>
-                    <div className="thumb"><img src="images/resource/testi-thumb-3.jpg" alt="" /></div>
-                    <span className="designation">Co Founder</span>
-                    <h4 className="name">Mike Hardon</h4>
-                  </div>
-                </div>
-                  </SwiperSlide>
-                  {/* testimonial Block */}
-                  <SwiperSlide>
-                <div className="testimonial-block">
-                  <div className="inner-box">
-                    <div className="content-box">
-                      <div className="rating"><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star-half-alt"></i></div>
-                      <div className="text">“All of our lorries are fitted with Satellite Tracking high value and temperature sensitive loads can be monitored at all times.</div>
-                    </div>
-                    <div className="thumb"><img src="/images/resource/testi-thumb-1.jpg" alt="" /></div>
-                    <span className="designation">Co Founder</span>
-                    <h4 className="name">Jhon D. William</h4>
-                  </div>
-                </div>
-                  </SwiperSlide>
+
+                  )})}
+
+              
               </Swiper>
             </div>
           </div>

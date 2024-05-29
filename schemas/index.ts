@@ -34,7 +34,7 @@ export const schemaTypes = [
      Tag,
    //  workprocess,
   //   HomeApproach,
-   //  clientcomments,
+     clientcomments,
    //  caseStudy,
      AboutOne,
   //   AboutSteps,

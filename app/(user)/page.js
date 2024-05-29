@@ -44,6 +44,14 @@ const newsquery = groq`
 
 
 
+const commentsquery = groq`
+  *[_type=='comments']{
+    ...,
+    
+  } | order(_createdAt desc)  
+`;
+
+
 
 
 
@@ -57,9 +65,9 @@ export const metadata = {
 const HomePage = async () => {
   const services = await client.fetch(servicesquery);
   const faqsData = await client.fetch(query);
-
+  const commentsData = await client.fetch(commentsquery);
   const newsData = await client.fetch(newsquery);
-  console.log("SERVICES-->" , faqsData)
+  console.log("SERVICES-->" , commentsData)
 
 
 
@@ -68,7 +76,7 @@ const HomePage = async () => {
     <>
       <div className="arabic">
 
-<Home newsdata={newsData} services={services} faqs={faqsData[0]}/>
+<Home comments={commentsData} newsdata={newsData} services={services} faqs={faqsData[0]}/>
 
 
 
