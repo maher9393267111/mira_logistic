@@ -113,10 +113,10 @@ export default function Footer1() {
                             </form>
                         </div> */}
                         <ul className="social-icon-two">
-                            <li><a target="_blank" href="#"><i className="fab fa-twitter"></i></a></li>
-                            <li><a target="_blank"><i className="fab fa-facebook"></i></a></li>
-                            <li><a target="_blank" ><i className="fab fa-pinterest"></i></a></li>
-                            <li><a target="_blank" ><i className="fab fa-instagram"></i></a></li>
+                            <li><a target="_blank"     rel="noopener noreferrer" href="#"><i className="fab fa-twitter"></i></a></li>
+                            <li><a target="_blank"     rel="noopener noreferrer"><i className="fab fa-facebook"></i></a></li>
+                            <li><a target="_blank"     rel="noopener noreferrer" ><i className="fab fa-pinterest"></i></a></li>
+                            <li><a target="_blank"     rel="noopener noreferrer" ><i className="fab fa-instagram"></i></a></li>
                         </ul>
                         </div>
                     </div>
