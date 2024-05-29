@@ -45,7 +45,7 @@ export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumb
 
                 {!footerStyle && < Footer1 />}
                 {footerStyle == 1 ? < Footer1 /> : null}
-                {footerStyle == 2 ? < Footer2 /> : null}
+                {/* {footerStyle == 2 ? < Footer2 /> : null} */}
 
             </div>
                 <BackToTop />
