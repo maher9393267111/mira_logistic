@@ -10,7 +10,7 @@ import News1 from "../../components/sections/News1"
 import Process from "../../components/sections/Process"
 import Services1 from "../../components/sections/Services1"
 import Testimonial1 from "../../components/sections/Testimonial1"
-export default function Home() {
+export default function Home({services}) {
 
     return (
         <>
@@ -18,7 +18,7 @@ export default function Home() {
                 <Banner />
                 <Features />
                 <About1 />
-                <Services1 />
+                <Services1 services={services} />
                 <Process />
                 <CallToAction />
                 <Faq />

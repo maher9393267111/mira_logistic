@@ -7,7 +7,7 @@ import {schemaTypes} from './schemas'
 import { myTheme } from './theme';
 import StudioNavbar from './components/StudioNavbar';
 import { iconPicker } from "sanity-plugin-icon-picker";
-const projectId = "hekqjt0e";
+const projectId = "2rpbuwsb";
 const dataset = "production";
 import { structureTool } from 'sanity/structure'
 import { media } from 'sanity-plugin-media'

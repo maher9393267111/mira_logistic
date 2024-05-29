@@ -13,6 +13,20 @@ export const revalidate = 30;
 //   } | order(_createdAt desc)  [0...1]
 // `;
 
+
+
+const servicesquery = groq`
+  *[_type=='service'] {
+    ...,
+    categories[]-> 
+    
+  } | order(_createdAt desc)
+  [0...3]
+`;
+
+
+
+
 const blogsquery = groq`
   *[_type=='post'] {
     ...,
@@ -21,6 +35,9 @@ const blogsquery = groq`
   } | order(_createdAt desc)
   [0...3]
 `;
+
+
+
 
 const productsquery = groq`
   *[_type=='product'] {
@@ -139,33 +156,18 @@ export const metadata = {
   },
 };
 const HomePage = async () => {
-  // const posts = await client.fetch(query);
-  const products = await client.fetch(productsquery);
-  const homebannerData = await client.fetch(bannerquery);
-  const sectionOneData = await client.fetch(onequery);
-  const sectionOneData2 = await client.fetch(aboutOnequery);
-  const blogsData = await client.fetch(blogsquery);
-  const contact = await client.fetch(contactquery);
-  // const servicesData = await client.fetch(servicesquery);
-  // const workProcessData = await client.fetch(workPorocessquery);
-  // const approachData = await client.fetch(approachquery);
-  // const clientsData = await client.fetch(clientsquery);
+  const services = await client.fetch(servicesquery);
 
-  // const caseInfo = await client.fetch(caseInfoquery);
+  console.log("SERVICES-->" , services)
 
-  // const casesData = await client.fetch(casesquery);
 
-  // const brandsData = await client.fetch(brandsquery);
-  // const showcaseData = await client.fetch(showcasequery);
 
-  // //showcasequery
-  // console.log(showcaseData);
 
   return (
     <>
       <div className="arabic">
 
-<Home/>
+<Home services={services}/>
 
 
 

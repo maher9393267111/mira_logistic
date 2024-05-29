@@ -1,10 +1,11 @@
 import Link from "next/link"
 import Menu from "./Menu"
 import MobileMenu from "./MobileMenu"
-
+import TopNav from '../../app/topNav'
 export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSearch, handleSearch, }) {
   return (
   <>
+  112
   <header className={`main-header header-style-two ${isSearch ? "moblie-search-active" : ""}`}>
     {/* Header Top */}
     <div className="header-top">
@@ -13,14 +14,14 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
         <div className="top-left">
 
           <ul className="list-style-one">
-            <li><i className="fa fa-envelope"></i> <Link href="mailto:needhelp@company.com">needhelp@company.com</Link></li>
+            <li><i className="fa fa-envelope"></i> <Link href="mailto:needhelp@company.com">needhelp@company.combb</Link></li>
             <li><i className="fa fa-map-marker"></i> 88 Broklyn Golden Street. New York</li>
           </ul>
         </div>
 
         <div className="top-right">
           <ul className="useful-links">
-            <li><Link href="#">Call</Link></li>
+            <li><Link href="#">Calle</Link></li>
             <li><Link href="#">Support</Link></li>
             <li><Link href="#">Contact</Link></li>
           </ul>
@@ -50,20 +51,27 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
           </nav>
 
           <div className="outer-box">
-            <div className="ui-btn-outer">
+            {/* <div className="ui-btn-outer">
               <button className="ui-btn ui-btn search-btn" onClick={handleSearch}>
                 <span className="icon lnr lnr-icon-search"></span>
               </button>
               <Link href="#" className="ui-btn"><i className="lnr-icon-shopping-cart"></i></Link>
-            </div>
+            </div> */}
 
 
-            <Link href="tel:+92(8800)9806" className="info-btn">
+            {/* <Link href="tel:+92(8800)9806" className="info-btn">
             <i className="icon fa fa-phone"></i>
-            <small>Call Anytime</small><br/> +92 (8800) 9806
-          </Link>
+            <small>Call AnytimeW</small><br/> +92 (8800) 9806cv
+          </Link> */}
 
-          <Link href="page-contact" className="theme-btn btn-style-one"><span className="btn-title">get solution</span></Link>
+
+          <TopNav/>
+
+          {/* <Link href="page-contact" className="theme-btn btn-style-one"><span className="btn-title">
+            get solution
+            
+            
+            </span></Link> */}
 
           <div className="mobile-nav-toggler" onClick={handleMobileMenu}><span className="icon lnr-icon-bars"></span></div>
         </div>
@@ -97,7 +105,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
             <span className="icon lnr-icon-envelope1" />
             <span className="title">Send Email</span>
             <div className="text">                                    
-              <Link href="/mailto:help@company.com">help@company.com</Link>
+              <Link href="/mailto:help@company.com">help@company.com12</Link>
             </div>
           </div>
         </li>
@@ -105,7 +113,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
           {/* Contact Info Box */}
           <div className="contact-info-box">
             <span className="icon lnr-icon-clock" />
-            <span className="title">Send Email</span>
+            <span className="title">Send Emailss</span>
             <div className="text">                                    
               Mon - Sat 8:00 - 6:30, Sunday - CLOSED
             </div>
@@ -122,15 +130,16 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
   </div>{/* End Mobile Menu */}
   {/* Header Search */}
   <div className="search-popup">
-    <span className="search-back-drop" onClick={handleSearch} />
-    <button className="close-search" onClick={handleSearch}><span className="fa fa-times" /></button>
+    {/* <span className="search-back-drop" onClick={handleSearch} />
+    <button className="close-search" onClick={handleSearch}><span className="fa fa-times" /></button> */}
     <div className="search-inner">
-      <form method="post" action="/">
+    <TopNav/>
+      {/* <form method="post" action="/">
         <div className="form-group">
           <input type="search" name="search-field" placeholder="Search..." required />
           <button type="submit"><i className="fa fa-search" /></button>
         </div>
-      </form>
+      </form> */}
     </div>
   </div>
   {/* End Header Search */}

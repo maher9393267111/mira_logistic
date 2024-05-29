@@ -18,6 +18,10 @@ export const Service = defineType({
       type: "string",
     }),
 
+    defineField({
+      name: "headingtr",
+      type: "string",
+    }),
 
 
     defineField({
@@ -57,6 +61,50 @@ export const Service = defineType({
       title: "DescArabic",
       type: "string",
     }),
+
+
+
+    defineField({
+      name: "desctr",
+      description: "Enter a short snippet for the turrkish desc...",
+      title: "DescTurkish",
+      type: "string",
+    }),
+
+
+
+    defineField({
+      name: 'body',
+      title: 'BodyEn',
+      type: 'blockContent',
+    }),
+
+
+    defineField({
+      name: 'bodyar',
+      title: 'BodyAr',
+      type: 'blockContent',
+    }),
+
+
+    defineField({
+      name: 'bodytr',
+      title: 'BodyTr',
+      type: 'blockContent',
+    }),
+
+
+
+    defineField({
+      name: "image",
+      title: "Image",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    }),
+
+
 
     // defineField({ name: "sidebarIcon", type: "inlineSvg" }),
 
@@ -148,14 +196,7 @@ export const Service = defineType({
     //   ],
     // },
 
-    defineField({
-      name: "image1",
-      title: "Image1",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
-    }),
+  
 
     // defineField({
     //   name: "image2",

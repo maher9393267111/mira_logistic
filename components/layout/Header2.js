@@ -5,6 +5,7 @@ import MobileMenu from "./MobileMenu"
 export default function Header2({ scroll, isSearch, handleSearch, isMobileMenu, handleMobileMenu }) {
     return (
         <>
+        3333
             <header className={`main-header header-style-one ${isSearch ? "moblie-search-active" : ""}`}>
                 {/* Header Top */}
                 <div className="header-top">
@@ -12,7 +13,7 @@ export default function Header2({ scroll, isSearch, handleSearch, isMobileMenu, 
                     <div className="top-left">
 
                     <ul className="list-style-one">
-                        <li><i className="fa fa-envelope"></i> <Link href="mailto:needhelp@company.com">needhelp@company.com</Link></li>
+                        <li><i className="fa fa-envelope"></i> <Link href="mailto:needhelp@company.com">needhelp@company.com22</Link></li>
                         <li><i className="fa fa-map-marker"></i> 88 Broklyn Golden Street. New York</li>
                     </ul>
                     </div>
