@@ -6,7 +6,7 @@ const PageTitle = (props) => {
     <section className="page-title arabic" style={{ backgroundImage: "url(/images/background/page-title.jpg)" }}>
       <div className="auto-container">
         <div className="title-outer text-center">
-          <h1 className="title">{props.pageName}</h1>
+          <h1 className="title !pt-12">{props.pageName}</h1>
           <ul className="page-breadcrumb">
             <li><Link href="/">Home</Link></li>
             <li>{props.pageName}</li>
