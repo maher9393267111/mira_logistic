@@ -50,12 +50,12 @@ const News1 = ({newsdata}) => {
               <div key={i} className="news-block col-lg-4 col-md-6 wow fadeInUp">
                 <div className="inner-box">
                   <div className="image-box">
-                    <figure className="image"><a href="news-details.html"><img 
+                    <figure className="image"><Link href={`/news/${item?.slug?.current}`} ><img 
 
 src={urlFor(item?.image)?.url()} 
                     // src={`/images/resource/${item.img}`}
                     
-                    alt=""/></a></figure>
+                    alt=""/></Link></figure>
                     <span className="date">30 <span className="month">March</span></span>
                   </div>
                   <div dir={lang === 'ar' && 'rtl'} className="lower-content">
