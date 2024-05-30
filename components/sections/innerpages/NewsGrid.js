@@ -27,7 +27,7 @@ const NewsGrid = ({news}) => {
           <div key={index} className="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
             <div className="inner-box">
               <div className="image-box">
-                <figure className="image"><Link href="news-details"><img 
+                <figure className="image"><Link href={`/news/${item?.slug?.current}`}><img 
                src={urlFor(item?.image)?.url()}   
                 // src="/images/resource/news-1.jpg"
                  alt=""/></Link></figure>
