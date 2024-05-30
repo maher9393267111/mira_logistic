@@ -1,17 +1,16 @@
-'use client'
+"use client";
 
-import React ,{useCallback} from 'react'
-import Head from 'next/head'
-import clsx from 'clsx'
+import React, { useCallback } from "react";
+import Head from "next/head";
+import clsx from "clsx";
 // import { Roboto_Flex } from 'next/font/google'
 // import { IBM_Plex_Sans_Arabic } from 'next/font/google'
 
 // import { Header } from '@/components/Header'
 
-import { LanguageProvider ,useLanguageContext } from './languageContext'
-import TopNav from './topNav'
+import { LanguageProvider, useLanguageContext } from "./languageContext";
+import TopNav from "./topNav";
 // import head from './(user)/head'
-
 
 // const roboto = Roboto_Flex({
 //   subsets: ['latin'],
@@ -25,32 +24,25 @@ import TopNav from './topNav'
 // })
 
 const LayoutComp = ({ programs, programsArabic, contact, children }) => {
-
-
-
   return (
     <LanguageProvider>
       {({ language }) => {
-        const isArabic = language === 'ar'
+        const isArabic = language === "ar";
         // const fontVariable = isArabic ? plex.variable : roboto.variable
         // const fontName = isArabic ? 'font-arabic' : 'font-sans'
-         const htmlLang = isArabic ? 'ar' : 'en'
+        const htmlLang = isArabic ? "ar" : "en";
 
         return (
-          <html 
-          lang={htmlLang}
-          >
-
-   <head>
-         <link
-          rel="icon"
-          href="/logo.png"
-          type="image/x-icon"
-          sizes="32x32"
-       />
-        <title> شركة شحن الميرا لوجستك &amp; الميرا لوجستك </title>
-      </head>  
-
+          <html lang={htmlLang}>
+            <head>
+              <link
+                rel="icon"
+                href="/logo.png"
+                type="image/x-icon"
+                sizes="32x32"
+              />
+              <title> شركة شحن الميرا لوجستك &amp; الميرا لوجستك </title>
+            </head>
 
             <body
 
@@ -61,7 +53,7 @@ const LayoutComp = ({ programs, programsArabic, contact, children }) => {
                 contact={contact}
               /> */}
 
-{/* <div className=' h-[50px]  bg-gray-00'>
+              {/* <div className=' h-[50px]  bg-gray-00'>
 
 
 
@@ -69,21 +61,13 @@ const LayoutComp = ({ programs, programsArabic, contact, children }) => {
 
 </div> */}
 
-
-
-              <div>
-
-                {children}
-
-              </div>
-            
-          
+              <div>{children}</div>
             </body>
           </html>
-        )
+        );
       }}
     </LanguageProvider>
-  )
-}
+  );
+};
 
-export default LayoutComp
+export default LayoutComp;

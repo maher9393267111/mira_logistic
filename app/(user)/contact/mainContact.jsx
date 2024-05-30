@@ -120,7 +120,7 @@ const ContactMain = () => {
                        onChange={inputChange}
                        value={state.email}
                     
-                    className="form-control required email" type="email" placeholder={t?.email}/>
+                    className="form-control required email arabic" type="email" placeholder={t?.email}/>
                   </div>
                 </div>
               </div>
@@ -132,7 +132,7 @@ const ContactMain = () => {
                       onChange={inputChange}
                       value={state.subject}
                     
-                    className="form-control required" type="text" placeholder={t?.subject}/>
+                    className="form-control required arabic" type="text" placeholder={t?.subject}/>
                   </div>
                 </div>
                 <div className="col-sm-6">
@@ -142,7 +142,7 @@ const ContactMain = () => {
                       onChange={inputChange}
                       value={state.phone}
                     
-                    className="form-control" type="text" placeholder={t?.phone}/>
+                    className="form-control arabic" type="text" placeholder={t?.phone}/>
                   </div>
                 </div>
               </div>
@@ -153,7 +153,7 @@ const ContactMain = () => {
                   value={state.message}
                 
                 
-                className="form-control required" rows="7" placeholder={t?.message}></textarea>
+                className="form-control required arabic" rows="7" placeholder={t?.message}></textarea>
               </div>
               <div className="mb-5 arabic">
                 <input name="form_botcheck" className="form-control" type="hidden" value="" />
@@ -177,9 +177,26 @@ const ContactMain = () => {
                   </div>
                   <div className="text">
                     {/* <h6 className="mb-1">Have any question?</h6> */}
-                    <a href="tel:905433053212"><span>Free</span>+905433053212</a>
+                    <a href="tel:+905348828077"><span></span>+905348828077</a>
+                  </div>
+
+                
+
+
+
+                </li>
+
+
+                <li>
+                  <div className="icon">
+                    <span className="lnr-icon-phone-plus"></span>
+                  </div>
+                  <div className="text">
+                    {/* <h6 className="mb-1">Have any question?</h6> */}
+                    <a href="tel:+905344425626"><span></span>+905344425626</a>
                   </div>
                 </li>
+
                 <li>
                   <div className="icon">
                     <span className="lnr-icon-envelope1"></span>

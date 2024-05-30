@@ -11,10 +11,11 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isClinicalDropdownOpen, setIsClinicalDropdownOpen] = useState(false);
+  const [isfixed ,setisFixed] = useState(true)
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
-  const toggleClose = () => setIsMenuOpen(false);
+  const toggleClose = () => setIsMenuOpen(true);
 
   const closeAllMenus = () => {
     setIsMenuOpen(false);
@@ -45,6 +46,26 @@ const Navbar = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const navbar = document.querySelector(`.info-nav`);
+      if (navbar) {
+        navbar.classList.toggle("fixed", window.scrollY > 600);
+        setisFixed(true)
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      setisFixed(false)
+    };
+  }, []);
+
+
+
+
 
   const { language :lang } = useLanguageContext()
 
@@ -68,7 +89,7 @@ const Navbar = () => {
       <nav
         ref={navbarRef}
         dir=""
-        className="   bg-white  shadow-2xl bg-yelow-100 px-3 arabic py-1 bg-opacity-80 md:bg-opacity-80 sticky top-0 z-50   text-black md:bg-primar font-primary mx-0 mt-0  bg-no-repeat bg-top md:bg-cover md:bg-top"
+        className={` ${isfixed && '!fixed right-0 left-0'} info-nav z-[100]  bg-white  shadow-2xl bg-yelow-100 px-3 arabic py-1 bg-opacity-80 md:bg-opacity-80 sticky top-0 z-50   text-black md:bg-primar font-primary mx-0 mt-0  bg-no-repeat bg-top md:bg-cover md:bg-top`}
       >
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
           <div className="flex gap-3 items-center">

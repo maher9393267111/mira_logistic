@@ -22,8 +22,18 @@ export default function Footer1() {
                 <li>
                     <i className="icon lnr-icon-smartphone"></i>
                     <span className="title">Phone:</span>
-                    <div className="text"><a target="_blank"     rel="noopener noreferrer" href="tel:+0123456789">+905433053212</a></div>
+                    <div className="text"><a target="_blank"     rel="noopener noreferrer" href="tel:+905344425626">+905344425626</a></div>
                 </li>
+
+
+                <li>
+                    <i className="icon lnr-icon-smartphone"></i>
+                    <span className="title">Phone:</span>
+                    <div className="text"><a target="_blank"     rel="noopener noreferrer" href="tel:+905348828077">+905348828077</a></div>
+                </li>
+
+
+
                 <li>
                     <i className="icon lnr-icon-location"></i>
                     <span className="title">Email:</span>
@@ -122,8 +132,9 @@ export default function Footer1() {
                             <li><a target="_blank"     rel="noopener noreferrer"><i className="fab fa-facebook"></i></a></li>
                             <li><a target="_blank"     rel="noopener noreferrer" ><i className="fab fa-pinterest"></i></a></li>
                             <li><a target="_blank"     rel="noopener noreferrer" ><i className="fab fa-instagram"></i></a></li>
+                            <li><a href="https://wtspee.com/905344425626" target="_blank"     rel="noopener noreferrer" ><i className="fab fa-whatsapp"></i></a></li>
 
-                            <li><a target="_blank"     rel="noopener noreferrer" ><i className="fab fa-whatsapp"></i></a></li>
+                            <li><a href="https://wtspee.com/905348828077" target="_blank"     rel="noopener noreferrer" ><i className="fab fa-whatsapp"></i></a></li>
                         </ul>
                         </div>
                     </div>
