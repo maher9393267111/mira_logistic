@@ -4,29 +4,29 @@ const email = "noreply.springworthbooks@gmail.com";
 
 import nodemailer from "nodemailer";
 
-const transporter = nodemailer.createTransport({
+const transporter = nodemailer.createTransport
+
+({
   port: 465,
   host: "smtp.gmail.com",
 
   secure: true, // use SSL
   auth: {
-    // user: "itesa.getViral@gmail.com",
-    // pass: "rtspkviskcrhorey",
-
+   
     user: email, // generated ethereal user
     pass: passw, // generated ethereal password
   },
 });
 
-async function sendEmail({ name, email, phone,message ,subject}) {
+
+
+async function sendEmail({ name, email, phone,message ,subject }) {
     console.log("SEND????????" ,name ,email ,phone ,message)
     const defaultYear = new Date().getFullYear();
   const emailOptions = {
     form: email,
-    to: 
-    //"info@elmiralojstik.com" ,
-    "director@elmiralojstik.com" ,
-   //  "basma94ghanem@gmail.com",
+    to: "info@elmiralojstik.com",
+    //"basma94ghanem@gmail.com",
     subject: `Contact Message from ${email}`,
     html: `<body style="background: #f3f4f6; padding:0 5px;">
     <div style="max-width: 600px; margin: 0 auto; padding: 20px 0; font-family:Trebuchet MS;">
