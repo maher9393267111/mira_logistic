@@ -48,11 +48,11 @@ export default function Footer1() {
              
 
 
-                <li>
+                {/* <li>
                     <i className="icon lnr-icon-map-marker"></i>
                     <span className="title">Address:</span>
                     <div className="text">Istanbul</div>
-                </li>
+                </li> */}
 
 
                 </ul>
@@ -134,10 +134,10 @@ export default function Footer1() {
                             </form>
                         </div> */}
                         <ul className="social-icon-two">
-                            <li><a target="_blank"     rel="noopener noreferrer" href="#"><i className="fab fa-twitter"></i></a></li>
-                            <li><a target="_blank"     rel="noopener noreferrer"><i className="fab fa-facebook"></i></a></li>
-                            <li><a target="_blank"     rel="noopener noreferrer" ><i className="fab fa-pinterest"></i></a></li>
-                            <li><a target="_blank"     rel="noopener noreferrer" ><i className="fab fa-instagram"></i></a></li>
+                            {/* <li><a target="_blank"     rel="noopener noreferrer" href="#"><i className="fab fa-twitter"></i></a></li> */}
+                            <li><a target="_blank" href="https://www.facebook.com/profile.php?id=61559966015912&mibextid=LQQJ4d"     rel="noopener noreferrer"><i className="fab fa-facebook"></i></a></li>
+                           
+                            <li><a target="_blank"  href="https://www.instagram.com/elmiralojistik?igsh=MXdjZnltb2hlbHByZQ%3D%3D"   rel="noopener noreferrer" ><i className="fab fa-instagram"></i></a></li>
                             <li><a href="https://wtspee.com/905344425626" target="_blank"     rel="noopener noreferrer" ><i className="fab fa-whatsapp"></i></a></li>
 
                             <li><a href="https://wtspee.com/905348828077" target="_blank"     rel="noopener noreferrer" ><i className="fab fa-whatsapp"></i></a></li>

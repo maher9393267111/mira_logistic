@@ -40,7 +40,7 @@ import {
       {
         name: 'Facebook',
         icon: <FaFacebookF />,
-        link: 'https://www.facebook.com/profile.php?id=100067204745978&mibextid=ZbWKwL',
+        link: 'https://www.facebook.com/profile.php?id=61559966015912&mibextid=LQQJ4d',
       },
   
       {

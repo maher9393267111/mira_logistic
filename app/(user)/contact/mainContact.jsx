@@ -206,13 +206,40 @@ const ContactMain = () => {
                     <a href="mailto:info@elmiralojstik.com">info@elmiralojstik.com</a>
                   </div>
                 </li>
+
+
+                
+                <li>
+                  <div className="icon">
+                    <span className="lnr-icon-envelope1"></span>
+                  </div>
+                  <div className="text">
+                    {/* <h6 className="mb-1">Write email</h6> */}
+                    <a href="mailto:director@elmiralojstik.com">director@elmiralojstik.com</a>
+                  </div>
+                </li>
+
+
+                
+                <li>
+                  <div className="icon">
+                    <span className="lnr-icon-envelope1"></span>
+                  </div>
+                  <div className="text">
+                    {/* <h6 className="mb-1">Write email</h6> */}
+                    <a href="mailto:muhasebe@elmiralojstik.com">muhasebe@elmiralojstik.com</a>
+                  </div>
+                </li>
+
+
+
                 <li>
                   <div className="icon">
                     <span className="lnr-icon-location"></span>
                   </div>
                   <div className="text">
                     {/* <h6 className="mb-1">Visit anytime</h6> */}
-                    <span>Istanbul</span>
+                    <span>ALTINŞEHİR MAH. GÜLNİHAL SK. NO: 6 İÇ KAPI NO: 3 BAŞAKŞEHİR/ İSTANBUL</span>
                   </div>
                 </li>
               </ul>

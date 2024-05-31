@@ -532,7 +532,7 @@
           "phone": "Numara",
           "subject":"Konu",
           "message":"Message",
-          "Send":"Gonder",
+          "send":"Gonder",
           "labels": {
             "address": "Address",
             "email": "Email",
