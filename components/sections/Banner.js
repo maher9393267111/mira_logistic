@@ -21,7 +21,7 @@ const Banner = () => {
           <div className="bottom-shape"></div>
         
           <div className="auto-container arabic">
-            <div className="image-box wow slideInRight" data-wow-delay="2000ms"><figure className="image"><img src="/images/main-slider/truck2.png" alt=""/></figure></div>
+            {/* <div className="image-box wow slideInRight" data-wow-delay="2000ms"><figure className="image"><img src="/images/main-slider/truck2.png" alt=""/></figure></div> */}
             <div className="content-box">
               <div className="title-box arabic">
                 <span className="sub-title wow fadeInUp">{title}</span>

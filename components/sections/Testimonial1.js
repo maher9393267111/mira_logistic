@@ -39,7 +39,7 @@ const swiperOptions = {
             },
         }
 
-        
+
     };
 const Testimonial1 = ( {comments}) => {
 
@@ -67,22 +67,27 @@ const title =   lang === 'en' ? "Our Customers Reviews" : lang === 'ar' ? "آر�
 
 
                   {comments?.map((item, index) => {
-                  
+
                   return (
 
                   <SwiperSlide key={index}>
                 <div className="testimonial-block arabic">
                   <div className="inner-box">
                     <div className="content-box">
-                      <div className="rating"><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star-half-alt"></i></div>
+                      <div className="rating"><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i>
+                      {/* <i className="fa fa-star-half-alt"></i> */}
+                      <i className="fa fa-star"></i>
+
+
+                      </div>
                       <div className="text">“
                       {item?.description}.</div>
                     </div>
                     <div className="thumb"><img
-                    src={urlFor(item?.image)?.url()}  
+                    src={urlFor(item?.image)?.url()}
                     //  src="/images/resource/testi-thumb-1.jpg"
                      alt="" /></div>
-                    <span className="designation">{item?.userwork}</span>
+                    {/* <span className="designation mt-2">{item?.userwork}</span> */}
                     <h4 className="name">{item?.username}</h4>
                   </div>
                 </div>
@@ -90,7 +95,7 @@ const title =   lang === 'en' ? "Our Customers Reviews" : lang === 'ar' ? "آر�
 
                   )})}
 
-              
+
               </Swiper>
             </div>
           </div>

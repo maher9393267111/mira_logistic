@@ -69,7 +69,7 @@ const ProjectDetails = ({data}) => {
               </h3>
 
 
-              <div className=' mt-12  arabic !text-black'>
+              <div className=' mt-  arabic !text-black'>
       <PortableText value={lang === 'en' ? data?.body : lang === 'ar' ? data?.bodyar : data?.bodytr} components={RichTextComponents} />
       </div>
 

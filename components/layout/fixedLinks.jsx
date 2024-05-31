@@ -48,6 +48,22 @@ import {
         icon: <MdEmail />,
         link: 'mailto:info@elmiralojstik.com',
       },
+
+      {
+        name: 'email2',
+        icon: <MdEmail />,
+        link: 'mailto:muhasebe@elmiralojstik.com',
+      },
+
+
+      {
+        name: 'email3',
+        icon: <MdEmail />,
+        link: 'mailto:director@elmiralojstik.com',
+      },
+
+
+
   
       // {
       //   name: 'yotube',

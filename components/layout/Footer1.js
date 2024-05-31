@@ -42,6 +42,9 @@ export default function Footer1() {
                 </li>
 
 
+          
+
+
              
 
 
@@ -50,6 +53,8 @@ export default function Footer1() {
                     <span className="title">Address:</span>
                     <div className="text">Istanbul</div>
                 </li>
+
+
                 </ul>
                     </div>
             </div>
