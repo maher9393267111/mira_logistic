@@ -95,7 +95,7 @@ const Navbar = () => {
           <div className="flex gap-3 items-center">
             <Link className="flex flex-row shimmer !shadow-2xl" href="/">
               <img
-                className=" object-cover  !w-[90px] !h-[70px]    rounded-md"
+                className=" object-cover  !w-[103px] !h-[83px]    rounded-md"
                 src={"/logo-3.jpg"}
                 // src="https://ik.imagekit.io/m1akscp5q/logo%20bac%20horizontal%20hitam%201.png?updatedAt=1705581337965"
                 width={52}
