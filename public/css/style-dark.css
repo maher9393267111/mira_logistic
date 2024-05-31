@@ -184,6 +184,11 @@ p,
   background-image: unset !important;
 }
 
+
+/* .bg.bg-image{
+  background:"rgba(0, 0, 0, 0.9) !important"
+} */
+
 .banner-section-two .bottom-shape {
   background-image: url(../images/main-slider/bottom-shape-dark.png);
 }

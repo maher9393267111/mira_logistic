@@ -93,7 +93,7 @@ const ContactMain = () => {
     <>
     <Layout headerStyle={1} footerStyle={1}>
     <section className="contact-details">
-      <div className="container pb-70">
+      <div className="container pb-70 !mt-12">
         <div className="row">
           <div className="col-xl-7 col-lg-6">
             <div dir={dir} className="sec-title arabic">
