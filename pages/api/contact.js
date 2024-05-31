@@ -40,7 +40,7 @@ async function sendEmail({ name, email, phone,message ,subject }) {
         <p style="font-size:1rem;"><strong> Phone: </strong> ${phone}</p>
         
        
-          
+        <p style="font-size:1rem;"><strong>Subject: </strong> ${subject}</p>    
         <p style="font-size:1rem;"><strong>Message: </strong> ${message}</p>
           
         
@@ -50,7 +50,7 @@ async function sendEmail({ name, email, phone,message ,subject }) {
     </div>
     
     <footer style="text-align: center; padding: 5px 0; color: #000; font-size: 1rem;">
-    <h2>Hamad</h2>
+    
     <p>© ${defaultYear} All rights reserved</p>
     </footer>
     </body>`
