@@ -4,10 +4,12 @@ const Banner = () => {
 
   const { language :lang } = useLanguageContext()
 
-  const title =lang === 'en' ? "Best logistic service in the world" : lang === 'ar' ? "أفضل خدمة لوجستية في العالم" : "DÜNYANIN EN İYİ LOJİSTİK HİZMETİ"
+  const title =lang === 'en' ? "Best logistic service in the world" : lang === 'ar' ? "  شركة ميرا لوجستيك  أفضل خدمة لوجستية في تركيا"  : "DÜNYANIN EN İYİ LOJİSTİK HİZMETİ"
 
-  const subtitle =lang === 'en' ? "Trust our services" : lang === 'ar' ? "ثق بخدماتنا" : "Hizmetlerimize güvenin"
+  const subtitle =lang === 'en' ? "Trust our services" : lang === 'ar' ? " ثق بخدماتنا مع شركة الميرا لوجستيك" : "Hizmetlerimize güvenin miralojistic"
 
+
+  const abouttitle =lang === 'en' ? "About Us" : lang === 'ar' ? "للاطلاع على المزيد" : "Hakkimizda"
 
 //Trust our services-
 
@@ -33,7 +35,11 @@ const Banner = () => {
                   
                   </h1>
               </div>
-              <Link href="page-about" className="theme-btn btn-style-one wow fadeInUp" data-wow-delay="1200ms"><span className="btn-title">Know More us</span></Link>
+              <Link href="/about" className="theme-btn btn-style-one wow fadeInUp" data-wow-delay="1200ms"><span className="btn-title">
+                
+                {abouttitle}
+              
+              </span></Link>
               <span className="icon icon-plane"></span>
             </div>
           </div>

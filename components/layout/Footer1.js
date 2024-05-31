@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { useLanguageContext } from "../../app/languageContext"
+import FixedLinks from './fixedLinks'
 
 export default function Footer1() {
 
@@ -155,6 +156,9 @@ export default function Footer1() {
                 </div>
     
             </footer>
+
+<FixedLinks/>
+
 
         </>
     )
