@@ -93,7 +93,7 @@ const Services1 = ({services}) => {
                           <div className="overlay"><Link              href={`/service/${item?.slug?.current}`} className="read-more"><i className="fa fa-long-arrow-alt-right"></i></Link></div>
                         </div>
                         <div className="lower-content">
-                          <Link href="page-service-details" className="read-more"><i className="fa fa-long-arrow-alt-right"></i></Link>
+                          <Link   href={`/service/${item?.slug?.current}`} className="read-more"><i className="fa fa-long-arrow-alt-right"></i></Link>
                           <h4 className="title arabic"><Link              href={`/service/${item?.slug?.current}`}>
                             
                             {lang === 'en' ? item?.heading : lang === 'ar' ? item?.headingar : item?.headingtr}
