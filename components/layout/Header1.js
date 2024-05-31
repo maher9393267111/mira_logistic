@@ -96,7 +96,7 @@ const Navbar = () => {
             <Link className="flex flex-row shimmer !shadow-2xl" href="/">
               <img
                 className=" object-cover  !w-[150px] !h-[45px]    rounded-md"
-                src={"/images/logo.png"}
+                src={"/logo.png"}
                 // src="https://ik.imagekit.io/m1akscp5q/logo%20bac%20horizontal%20hitam%201.png?updatedAt=1705581337965"
                 width={52}
                 height={52}
