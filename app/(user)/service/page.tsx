@@ -21,9 +21,12 @@ const contactquery = groq`
 
 
 
+
+
 export const metadata = {
+  title: "Mira Lojistik",
   icons: {
-    icon: "/smawilogo.png",
+    icon: "/logo-3.jpg",
   },
 };
 

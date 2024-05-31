@@ -12,11 +12,15 @@ const query = groq`
   } | order(_createdAt desc)
 `;
 
+
+
 export const metadata = {
+  title: "Mira Lojistik",
   icons: {
-    icon: "/assets/img/sm-logo.svg",
+    icon: "/logo-3.jpg",
   },
 };
+
 
 interface Props {
   searchParams: {

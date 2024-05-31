@@ -51,11 +51,15 @@ const aboutquery = groq`
   } | order(_createdAt desc)
 `;
 
+
+
 export const metadata = {
+  title: "Mira Lojistik",
   icons: {
-    icon: "/logo.png",
+    icon: "/logo-3.jpg",
   },
 };
+
 const HomePage = async () => {
   const services = await client.fetch(servicesquery);
   const faqsData = await client.fetch(query);

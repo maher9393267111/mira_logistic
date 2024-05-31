@@ -37,11 +37,11 @@ const LayoutComp = ({ programs, programsArabic, contact, children }) => {
             <head>
               <link
                 rel="icon"
-                href="/logo.png"
+                href="/logo-3.تحل"
                 type="image/x-icon"
                 sizes="32x32"
               />
-              <title> شركة شحن الميرا لوجستك &amp; الميرا لوجستك </title>
+              <title> Mira lojisik &amp; ميرا للشحن الدولي</title>
             </head>
 
             <body

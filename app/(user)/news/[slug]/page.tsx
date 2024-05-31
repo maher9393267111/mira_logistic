@@ -3,12 +3,15 @@ import Image from 'next/image';
 import { client } from '../../../../lib/sanity.client';
 import MainNews from './mainSingleNews'
 
+
+
 export const metadata = {
-  title: "Zenfy - Software, SaaS & Digital Agency Template",
+  title: "Mira Lojistik",
   icons: {
-    icon: "/assets/img/sm-logo.svg",
+    icon: "/logo-3.jpg",
   },
 };
+
 
 
 
