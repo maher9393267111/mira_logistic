@@ -43,7 +43,7 @@ const Banner = () => {
 
 <div className="block mt-4">
 
-                <h1 className="title !inline mt-4 wow fadeInUp !bg-red-600 py-2 px-4 !text-xl md:!text-3xl md:w-[70%]     rounded-3xl   " data-wow-delay="600ms">
+                <h1 className="title md:!inline mt-4 wow fadeInUp !bg-red-600 py-2 px-4 !text-xl md:!text-3xl md:w-[70%]     rounded-3xl   " data-wow-delay="600ms">
                   {/* Reliable & Safes */}
                 
                
