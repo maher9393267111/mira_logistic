@@ -6,7 +6,8 @@ const Banner = () => {
 
   const title =lang === 'en' ? "We put the world in your hands" : lang === 'ar' ? "نضع العالم بين يديكم"  : "Dünyayı ellerinize veriyoruz"
 
-  const subtitle =lang === 'en' ? "Trust our services with Mira International Shipping Company" : lang === 'ar' ? "ثق بخدماتنا مع شركة ميرا للشحن الدولي " : "Mira Uluslararası Nakliye Şirketi ile hizmetlerimize güvenin"
+  const subtitle =lang === 'en' ? "Trust our services with demo International Shipping Company" : lang === 'ar' ?
+   "ثق بخدماتنا مع شركةا للشحن الدولي " : "demo Uluslararası Nakliye Şirketi ile hizmetlerimize güvenin"
 
   const abouttitle =lang === 'en' ? "About Us" : lang === 'ar' ? "للاطلاع على المزيد" : "Hakkimizda"
 

@@ -7,7 +7,7 @@ const About1 = ({about}) => {
   const dir = lang === 'ar' && 'rtl'
 
 
-  const aboutTitle =  lang === 'en' ? "About MiraLojistik company": lang === 'ar' ? " عن شركة ميرا لوجستيك"  : "MiraLojistik Sirket hakkinda"
+  const aboutTitle =  lang === 'en' ? "About demoLojistik company": lang === 'ar' ? "عن الشركة"  : "demoLojistik Sirket hakkinda"
   const customersTitle =  lang === 'en' ? "Satisfied Clients": lang === 'ar' ? "عملاء راضون" : "Memnun Müşteriler"
   const sinceTitle =  lang === 'en' ? "Since": lang === 'ar' ? "منذ" : "bu yana"
 

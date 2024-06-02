@@ -54,7 +54,7 @@ const aboutquery = groq`
 
 
 export const metadata = {
-  title: "Mira Lojistik",
+  title: " نموذج شركة شحن",
   icons: {
     icon: "/logo-3.jpg",
   },

@@ -46,20 +46,20 @@ import {
       // {
       //   name: 'email',
       //   icon: <MdEmail />,
-      //   link: 'mailto:info@elmiralojstik.com',
+      //   link: 'mailto:info@eldemolojstik.com',
       // },
 
       // {
       //   name: 'email2',
       //   icon: <MdEmail />,
-      //   link: 'mailto:muhasebe@elmiralojstik.com',
+      //   link: 'mailto:muhasebe@eldemolojstik.com',
       // },
 
 
       // {
       //   name: 'email3',
       //   icon: <MdEmail />,
-      //   link: 'mailto:director@elmiralojstik.com',
+      //   link: 'mailto:director@eldemolojstik.com',
       // },
 
 

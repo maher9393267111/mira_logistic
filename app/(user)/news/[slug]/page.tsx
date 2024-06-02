@@ -6,9 +6,9 @@ import MainNews from './mainSingleNews'
 
 
 export const metadata = {
-  title: "Mira Lojistik",
+  title: " نموذج شركة شحن",
   icons: {
-    icon: "/logo-3.jpg",
+    icon: "/images/logo.png",
   },
 };
 

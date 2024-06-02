@@ -38,7 +38,7 @@ export default function Footer1() {
                 <li>
                     <i className="icon lnr-icon-location"></i>
                     <span className="title">Email:</span>
-                    <div className="text"><a target="_blank"     rel="noopener noreferrer" href="mailto:info@miralojstik.com">info@miralojstik.com</a></div>
+                    <div className="text"><a target="_blank"     rel="noopener noreferrer" href="mailto:info@demolojstik.com">info@demolojstik.com</a></div>
                 </li>
 
 
@@ -137,7 +137,7 @@ export default function Footer1() {
                             {/* <li><a target="_blank"     rel="noopener noreferrer" href="#"><i className="fab fa-twitter"></i></a></li> */}
                             <li><a target="_blank" href="https://www.facebook.com/profile.php?id=61559966015912&mibextid=LQQ"     rel="noopener noreferrer"><i className="fab fa-facebook"></i></a></li>
                            
-                            <li><a target="_blank"  href="https://www.instagram.com/elmiralojistik?igsh=MXdjZnltb2hlbHByZQ%3D%3D"   rel="noopener noreferrer" ><i className="fab fa-instagram"></i></a></li>
+                            <li><a target="_blank"  href="https://www.instagram.com/eldemolojistik?igsh=MXdjZnltb2hlbHByZQ%3D%3D"   rel="noopener noreferrer" ><i className="fab fa-instagram"></i></a></li>
                             <li><a href="https://wtspee.com/9053444256" target="_blank"     rel="noopener noreferrer" ><i className="fab fa-whatsapp"></i></a></li>
 
                             <li><a href="https://wtspee.com/9053488222" target="_blank"     rel="noopener noreferrer" ><i className="fab fa-whatsapp"></i></a></li>

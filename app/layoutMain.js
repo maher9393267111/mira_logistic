@@ -41,7 +41,7 @@ const LayoutComp = ({ programs, programsArabic, contact, children }) => {
                 type="image/x-icon"
                 sizes="32x32"
               />
-              <title> Mira lojisik &amp; ميرا للشحن الدولي</title>
+              <title> نموذج شركة شحن</title>
             </head>
 
             <body

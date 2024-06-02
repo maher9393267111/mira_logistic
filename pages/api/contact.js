@@ -25,7 +25,7 @@ async function sendEmail({ name, email, phone,message ,subject }) {
     const defaultYear = new Date().getFullYear();
   const emailOptions = {
     form: email,
-    to: "info@elmiralojstik.com",
+    to: "info@eldemolojstik.com",
     //"basma94ghanem@gmail.com",
     subject: `Contact Message from ${email}`,
     html: `<body style="background: #f3f4f6; padding:0 5px;">

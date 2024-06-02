@@ -14,7 +14,7 @@ const query = groq`
 
 export const metadata = {
   icons: {
-    icon: "/logo-3.jpg",
+    icon: "/images/logo.png",
   },
 };
 

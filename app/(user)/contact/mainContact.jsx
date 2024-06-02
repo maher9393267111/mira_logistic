@@ -203,7 +203,7 @@ const ContactMain = () => {
                   </div>
                   <div className="text">
                     {/* <h6 className="mb-1">Write email</h6> */}
-                    <a href="mailto:info@miralojstik.com">info@elmiralojstik.com</a>
+                    <a href="mailto:info@demolojstik.com">info@eldemolojstik.com</a>
                   </div>
                 </li>
 
@@ -215,7 +215,7 @@ const ContactMain = () => {
                   </div>
                   <div className="text">
                     {/* <h6 className="mb-1">Write email</h6> */}
-                    <a href="mailto:director@elmiralojstik.com">director@miralojstik.com</a>
+                    <a href="mailto:director@eldemolojstik.com">director@demolojstik.com</a>
                   </div>
                 </li>
 
@@ -227,7 +227,7 @@ const ContactMain = () => {
                   </div>
                   <div className="text">
                     {/* <h6 className="mb-1">Write email</h6> */}
-                    <a href="mailto:muhasebe@elmiralojstik.com">muhasebe@miralojstik.com</a>
+                    <a href="mailto:muhasebe@eldemolojstik.com">muhasebe@demolojstik.com</a>
                   </div>
                 </li>
 
